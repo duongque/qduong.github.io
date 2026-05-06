@@ -1,0 +1,15 @@
+# robots.txt — controls how search engines crawl the site.
+#
+# DEFAULT (current state) → fully indexable by Google, Bing, etc.
+# To HIDE the site from search results: comment out the lines below
+# and uncomment the "Disallow: /" block. Then commit + push.
+#
+# Note: this only stops INDEXING. The site itself stays publicly accessible
+# at https://<your-handle>.github.io for anyone who knows the URL.
+
+User-agent: *
+Allow: /
+
+# ---- HIDDEN MODE (uncomment to opt out of search indexing) ----
+# User-agent: *
+# Disallow: /

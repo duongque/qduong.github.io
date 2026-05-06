@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Quentin DUONG — PhD in Accelerator Physics, Nuclear Engineer. Radiation protection, dosimetry, FLUKA, MCNP, Geant4." />
+  <meta name="author" content="Quentin DUONG" />
+  <meta name="theme-color" content="#0a192f" />
+
+  <!-- Favicon: SVG monogram Dg (Z=17, mint on navy). Simplified — no "Duong" subtext at favicon size. -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'><rect x='3' y='3' width='32' height='32' rx='6' fill='%230a192f' stroke='%2364ffda' stroke-width='2.5'/><text x='5.5' y='11.5' font-family='monospace' font-size='6.5' font-weight='600' fill='%2364ffda'>17</text><text x='19' y='25' text-anchor='middle' font-family='monospace' font-size='14' font-weight='700' fill='%2364ffda'>Dg</text></svg>" />
+
+  <!-- Browser tab / window title. To rename later, edit this single line. -->
+  <title>Dr. Quentin DUONG</title>
+
+  <meta property="og:title" content="Quentin DUONG — Portfolio" />
+  <meta property="og:description"
+    content="PhD in Accelerator Physics — Radiation protection, dosimetry, Monte Carlo simulations." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- Cursor spotlight effect -->
+  <div id="spotlight" aria-hidden="true"></div>
+
+  <!-- Skip link for a11y -->
+  <a href="#content" class="skip-link" data-i18n="a11y.skip">Skip to content</a>
+
+  <!-- Top bar (sticky on all sizes) -->
+  <header class="topbar" aria-label="Top navigation">
+    <a href="#about" class="topbar__brand" aria-label="Home — Quentin Duong">
+      <svg viewBox="0 0 38 38" width="54" height="54" aria-hidden="true">
+        <rect x="3" y="3" width="32" height="32" rx="6" fill="none" stroke="currentColor" stroke-width="1.7" />
+        <text x="5.5" y="11.5" font-family="JetBrains Mono, monospace" font-size="6.5" font-weight="500"
+          fill="currentColor">17</text>
+        <text x="19" y="22.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13"
+          font-weight="600" fill="currentColor" letter-spacing="0.5">Dg</text>
+        <text x="19" y="31" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="3.4"
+          font-weight="500" fill="currentColor" opacity="0.78" letter-spacing="0.7">Duong</text>
+      </svg>
+    </a>
+    <div class="topbar__actions">
+      <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
+        <span class="lang-toggle__current">EN</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__alt">FR</span>
+      </button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- ============== LEFT COLUMN (fixed on desktop) ============== -->
+    <aside class="side">
+      <div class="side__inner">
+        <header class="side__header">
+          <h1 class="side__name">Dr Quentin DUONG</h1>
+          <p class="side__role" data-i18n="side.role">Accelerator Physicist & Nuclear Engineer</p>
+          <p class="side__tagline" data-i18n="side.tagline">
+            I build expertise at the interface of accelerator physics, radiation protection and medical applications.
+          </p>
+        </header>
+
+        <nav class="side-nav" aria-label="Section navigation">
+          <ul>
+            <li><a href="#about" class="side-nav__link" data-target="about"><span class="side-nav__bar"></span><span
+                  data-i18n="nav.about">About</span></a></li>
+            <li><a href="#experience" class="side-nav__link" data-target="experience"><span
+                  class="side-nav__bar"></span><span data-i18n="nav.experience">Experience</span></a></li>
+            <li><a href="#education" class="side-nav__link" data-target="education"><span
+                  class="side-nav__bar"></span><span data-i18n="nav.education">Education</span></a></li>
+            <li><a href="#projects" class="side-nav__link" data-target="projects"><span
+                  class="side-nav__bar"></span><span data-i18n="nav.projects">Projects</span></a></li>
+            <li><a href="#publications" class="side-nav__link" data-target="publications"><span
+                  class="side-nav__bar"></span><span data-i18n="nav.publications">Publications</span></a></li>
+            <li><a href="#contact" class="side-nav__link" data-target="contact"><span class="side-nav__bar"></span><span
+                  data-i18n="nav.contact">Contact</span></a></li>
+          </ul>
+        </nav>
+
+        <div class="side__bottom">
+          <button id="lang-toggle-desk" class="lang-toggle lang-toggle--desk" aria-label="Toggle language">
+            <span class="lang-toggle__current">EN</span>
+            <span class="lang-toggle__sep">/</span>
+            <span class="lang-toggle__alt">FR</span>
+          </button>
+
+          <ul class="socials" aria-label="Social links">
+            <li>
+              <a href="https://www.linkedin.com/in/duong-q" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" id="github-link-side">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M12 2A10 10 0 002 12a10 10 0 006.84 9.49c.5.09.66-.22.66-.49v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.16.59.67.49A10 10 0 0022 12 10 10 0 0012 2z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://orcid.org/" target="_blank" rel="noopener" aria-label="ORCID" id="orcid-link-side">
+                <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" fill-rule="evenodd">
+                  <path
+                    d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128zM86.3 186.2H70.9V79.1h15.4v107.1zM78.6 56.8c0 5.5-4.5 10.1-10.1 10.1s-10.1-4.6-10.1-10.1c0-5.6 4.5-10.1 10.1-10.1s10.1 4.6 10.1 10.1zm30.3 22.3h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7 0-21.5-13.7-39.7-43.7-39.7h-23.7v79.4z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:q.duong13@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="M3 7l9 6 9-6" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <p class="side__footer-text" data-i18n="side.footer">Built & deployed via GitHub Pages.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============== MAIN CONTENT ============== -->
+    <main id="content" class="main">
+
+      <!-- Mobile-only intro (top of page on small screens) -->
+      <header class="mobile-intro">
+        <h1>Quentin DUONG</h1>
+        <p class="mobile-intro__role" data-i18n="side.role">Accelerator Physicist & Nuclear Engineer</p>
+        <p class="mobile-intro__tagline" data-i18n="side.tagline">
+          I build expertise at the interface of accelerator physics, radiation protection and medical applications.
+        </p>
+      </header>
+      <img src="assets/photo.jpg" alt="Quentin DUONG" class="hero__photo" />
+
+      <!-- ===== ABOUT ===== -->
+      <section id="about" class="section section--first" aria-labelledby="about-title">
+        <h2 id="about-title" class="section__title">
+          <span class="section__num">01.</span><span data-i18n="about.title">About</span>
+        </h2>
+        <div class="prose">
+          <p data-i18n="about.p1">
+            I am a PhD in accelerator physics (Université Paris-Saclay, December 2025, with the jury's congratulations)
+            and a nuclear engineer trained at <a href="https://phelma.grenoble-inp.fr/" target="_blank"
+              rel="noopener">Grenoble INP – PHELMA</a>. My doctoral research, conducted at <a href="https://home.cern/"
+              target="_blank" rel="noopener">CERN</a> under Dr. Vincent Baglin, focused on the measurement and
+            characterisation of the electron cloud in the LHC using the Vacuum Pilot Sector.
+          </p>
+          <p data-i18n="about.p2">
+            My career vision is clear: contribute to <span class="hl">radiation protection</span>, <span
+              class="hl">dosimetry</span> and the <span class="hl">medical applications of particle accelerators</span>
+            — FLASH-VHEE radiotherapy, hadron therapy, and the safety of large-scale facilities. I value
+            standardisation, precision and clear scientific communication, and I invest personal time in deepening my
+            expertise on FLUKA, radiation safety regulations and modern data pipelines.
+          </p>
+          <p data-i18n="about.p3">
+            Beyond research, I enjoy cooking, cinema, martial arts and physics — the kind of curiosity that doesn't
+            switch off.
+          </p>
+          <p data-i18n="about.tools_intro">Tools and codes I currently use:</p>
+        </div>
+
+        <ul class="skills-grid" aria-label="Tools and codes">
+          <li data-logo="fluka"></li>
+          <li data-logo="comsol"></li>
+          <li data-logo="pyecloud"></li>
+          <li data-logo="geant4"></li>
+          <li data-logo="mcnp"></li>
+          <li data-logo="madx"></li>
+          <li data-logo="cst"></li>
+          <li data-logo="python"></li>
+          <li data-logo="cpp"></li>
+          <li data-logo="root"></li>
+          <li data-logo="hpc"></li>
+          <li data-logo="labview"></li>
+        </ul>
+      </section>
+
+      <!-- ===== EXPERIENCE ===== -->
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section__title">
+          <span class="section__num">02.</span><span data-i18n="experience.title">Where I've worked</span>
+        </h2>
+
+        <ol class="exp-timeline" aria-label="Career timeline (most recent on top)">
+
+          <li class="exp-item exp-item--right">
+            <p class="exp-date exp-date--external">Jan 2026 — <span data-i18n="exp.now">Present</span></p>
+            <div class="exp-card">
+              <div class="exp-card__head" role="button" tabindex="0" aria-expanded="false">
+                <span class="exp-org-icon" data-logo-icon="building" aria-hidden="true"></span>
+                <h3>
+                  <span class="exp-role" data-i18n="exp.fr_role">R&D Engineer — Automation & Data</span>
+                  <span class="exp-org">@ Freelance</span>
+                </h3>
+              </div>
+              <div class="exp-card__body">
+                <ul class="bullets">
+                  <li data-i18n="exp.fr_b1">End-to-end pipeline for processing unstructured PDF documents.</li>
+                  <li data-i18n="exp.fr_b2">AI-assisted information extraction with LLM APIs, automated structuring and
+                    traceable archival.</li>
+                  <li data-i18n="exp.fr_b3">Python, async I/O, schema validation, integration tests.</li>
+                </ul>
+              </div>
+              <button class="exp-card__toggle" type="button" aria-label="Toggle details"></button>
+            </div>
+          </li>
+
+          <li class="exp-item exp-item--left">
+            <p class="exp-date exp-date--external">Oct 2022 — Sep 2025</p>
+            <div class="exp-card">
+              <div class="exp-card__head" role="button" tabindex="0" aria-expanded="false">
+                <span class="exp-org-icon" data-logo-icon="cern" aria-hidden="true"></span>
+                <h3>
+                  <span class="exp-role" data-i18n="exp.cern_role">Doctoral Researcher — Accelerator Physics</span>
+                  <span class="exp-org">@ <a href="https://home.cern/" target="_blank" rel="noopener">CERN</a></span>
+                </h3>
+              </div>
+              <div class="exp-card__body">
+                <ul class="bullets">
+                  <li data-i18n="exp.cern_b1">Three-year doctoral programme on the measurement and characterisation of
+                    the electron cloud in the LHC using the Vacuum Pilot Sector.</li>
+                  <li data-i18n="exp.cern_b2">Built and ran an analysis pipeline over <strong>7000+ LHC fills</strong>
+                    (2015–2025) — extraction, standardisation and archival.</li>
+                  <li data-i18n="exp.cern_b3">Routine work in radioactive environments with precision instrumentation;
+                    calibration, troubleshooting, in-tunnel access.</li>
+                  <li data-i18n="exp.cern_b4">Participated in <strong>CLEAR</strong> operations — the 200 MeV electron
+                    linac dedicated to FLASH-VHEE research.</li>
+                  <li data-i18n="exp.cern_b5">Trained on PyECLOUD, COMSOL multiphysics and FLUKA Monte Carlo transport.
+                  </li>
+                </ul>
+              </div>
+              <button class="exp-card__toggle" type="button" aria-label="Toggle details"></button>
+            </div>
+          </li>
+
+          <li class="exp-item exp-item--right">
+            <p class="exp-date exp-date--external">Apr 2022 — Aug 2022</p>
+            <div class="exp-card">
+              <div class="exp-card__head" role="button" tabindex="0" aria-expanded="false">
+                <span class="exp-org-icon" data-logo-icon="kek" aria-hidden="true"></span>
+                <h3>
+                  <span class="exp-role" data-i18n="exp.kek_role">Visiting Researcher — Particle Physics</span>
+                  <span class="exp-org">@ <a href="https://www.kek.jp/en/" target="_blank" rel="noopener">KEK</a> /
+                    J-PARC</span>
+                </h3>
+              </div>
+              <div class="exp-card__body">
+                <ul class="bullets">
+                  <li data-i18n="exp.kek_b1">Five-month internship on cosmic muon measurement in an underground cavern
+                    with the COMET experiment at J-PARC.</li>
+                  <li data-i18n="exp.kek_b2">Cosmic muons used as reference particles for dosimetric calibration of gas
+                    detectors.</li>
+                  <li data-i18n="exp.kek_b3">Long-duration acquisition (C++), advanced statistical analysis.</li>
+                </ul>
+              </div>
+              <button class="exp-card__toggle" type="button" aria-label="Toggle details"></button>
+            </div>
+          </li>
+
+          <li class="exp-item exp-item--left">
+            <p class="exp-date exp-date--external">2021</p>
+            <div class="exp-card">
+              <div class="exp-card__head" role="button" tabindex="0" aria-expanded="false">
+                <span class="exp-org-icon" data-logo-icon="edf" aria-hidden="true"></span>
+                <h3>
+                  <span class="exp-role" data-i18n="exp.edf_role">Engineering Intern — Nuclear Safety
+                    Computations</span>
+                  <span class="exp-org">@ EDF</span>
+                </h3>
+              </div>
+              <div class="exp-card__body">
+                <ul class="bullets">
+                  <li data-i18n="exp.edf_b1">Two-month internship on the automation of safety computations for nuclear
+                    power plant steam generators.</li>
+                  <li data-i18n="exp.edf_b2">VBA / scripting, code review, regression testing on legacy tooling.</li>
+                </ul>
+              </div>
+              <button class="exp-card__toggle" type="button" aria-label="Toggle details"></button>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <!-- ===== EDUCATION ===== -->
+      <section id="education" class="section" aria-labelledby="education-title">
+        <h2 id="education-title" class="section__title">
+          <span class="section__num">03.</span><span data-i18n="education.title">Education</span>
+        </h2>
+        <ol class="edu-list">
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2022 — 2025</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="paris-saclay" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>PhD — Accelerator Physics</h3>
+              <p class="edu-list__org">Université Paris-Saclay · <span data-i18n="edu.phd_honor">With the jury's
+                  congratulations</span></p>
+              <p data-i18n="edu.phd_thesis"><em>Thesis:</em> Study of the electron cloud in the CERN LHC with the Vacuum
+                Pilot Sector.</p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2025</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="ifast" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>i-FAST Medical Accelerator Innovation Challenge</h3>
+              <p class="edu-list__org">Archamps</p>
+              <p data-i18n="edu.ifast">10 intensive days on medical innovation through accelerators. Team proposal:
+                "Destruction of fibrosis by anti-fibrotic nanoparticles activated by FLASH irradiation."</p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2022</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="juas" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>MSc — Accelerator Physics & Technology (JUAS)</h3>
+              <p class="edu-list__org">Archamps · <span data-i18n="edu.honors_high">High distinction</span></p>
+              <p data-i18n="edu.juas">Accelerator design, beam dynamics & instrumentation, collective effects, magnets,
+                synchrotron radiation, cryogenics, RF, vacuum systems.</p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2020 — 2021</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="grenoble-alpes" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>MSc — Nuclear Physics</h3>
+              <p class="edu-list__org">Université Grenoble Alpes</p>
+              <p data-i18n="edu.nuclear">Advanced nuclear physics · Plasma physics · Nuclear fusion.</p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2019 — 2022</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="phelma" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>Engineering Degree — Nuclear Engineering & Physics</h3>
+              <p class="edu-list__org">Grenoble INP – PHELMA · <span data-i18n="edu.honors">Distinction</span></p>
+              <p data-i18n="edu.phelma">Reactor physics, nuclear physics, radiation–matter interaction & dosimetry,
+                radiation protection, neutron transport simulation, thermohydraulics.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section__title">
+          <span class="section__num">04.</span><span data-i18n="projects.title">Some things I've built</span>
+        </h2>
+
+        <p class="section__lede" data-i18n="projects.lede">
+          A selection of FLUKA, PyECLOUD and multiphysics projects. Each card will be expanded with geometry, source
+          term, scoring strategy and key results.
+        </p>
+
+        <!-- Featured Projects (auto-rendered from js/projects.js) -->
+        <ul id="featured-list" class="featured" aria-label="Featured projects"></ul>
+
+        <!-- Other Noteworthy Projects (auto-rendered from js/projects.js) -->
+        <h3 class="other__title" data-i18n="projects.other_title">Other noteworthy projects</h3>
+        <ul id="other-grid" class="other-grid"></ul>
+
+      </section>
+
+      <!-- ===== PUBLICATIONS ===== -->
+      <section id="publications" class="section" aria-labelledby="publications-title">
+        <h2 id="publications-title" class="section__title">
+          <span class="section__num">05.</span><span data-i18n="publications.title">Publications & Thesis</span>
+        </h2>
+
+        <ul class="pub-previews" aria-label="Publication previews, most recent first">
+
+          <li>
+            <article class="pub-preview">
+              <a href="https://theses.hal.science/tel-05443980" target="_blank" rel="noopener"
+                class="pub-preview__link">
+                <div class="pub-preview__cover">
+                  <img src="assets/publications/thesis_2025.png" alt="" loading="lazy"
+                    onerror="this.classList.add('is-missing')" />
+                </div>
+                <div class="pub-preview__content">
+                  <h4 class="pub-preview__title">Study of the electron cloud in the CERN LHC with the Vacuum Pilot
+                    Sector</h4>
+                  <p class="pub-preview__journal">PhD Thesis · Université Paris-Saclay</p>
+                  <p class="pub-preview__year">2025</p>
+                </div>
+              </a>
+              <button class="pub-preview__toggle" type="button" aria-expanded="false">
+                <span class="pub-preview__toggle-icon" aria-hidden="true">+</span>
+                <span class="pub-preview__toggle-label" data-i18n="pub.show_abstract">Show abstract</span>
+              </button>
+              <div class="pub-preview__abstract">
+                <p>Abstract — to fill. Replace this with the actual thesis abstract (a few sentences summarising the
+                  work, methodology and key results).</p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="pub-preview is-reviewing">
+              <a href="#" target="_blank" rel="noopener" class="pub-preview__link">
+                <div class="pub-preview__cover">
+                  <img src="assets/publications/paper_1.png" alt="" loading="lazy"
+                    onerror="this.classList.add('is-missing')" />
+                </div>
+                <div class="pub-preview__content">
+                  <h4 class="pub-preview__title" data-i18n="pub.placeholder_title">Article title — to fill</h4>
+                  <p class="pub-preview__journal" data-i18n="pub.placeholder_journal">Journal name</p>
+                  <p class="pub-preview__year">2025</p>
+                </div>
+              </a>
+              <button class="pub-preview__toggle" type="button" aria-expanded="false">
+                <span class="pub-preview__toggle-icon" aria-hidden="true">+</span>
+                <span class="pub-preview__toggle-label" data-i18n="pub.show_abstract">Show abstract</span>
+              </button>
+              <div class="pub-preview__abstract">
+                <p data-i18n="pub.placeholder_abstract">Abstract — to fill.</p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="pub-preview">
+              <a href="#" target="_blank" rel="noopener" class="pub-preview__link">
+                <div class="pub-preview__cover">
+                  <img src="assets/publications/paper_2.png" alt="" loading="lazy"
+                    onerror="this.classList.add('is-missing')" />
+                </div>
+                <div class="pub-preview__content">
+                  <h4 class="pub-preview__title" data-i18n="pub.placeholder_title">Article title — to fill</h4>
+                  <p class="pub-preview__journal" data-i18n="pub.placeholder_journal">Journal name</p>
+                  <p class="pub-preview__year">2024</p>
+                </div>
+              </a>
+              <button class="pub-preview__toggle" type="button" aria-expanded="false">
+                <span class="pub-preview__toggle-icon" aria-hidden="true">+</span>
+                <span class="pub-preview__toggle-label" data-i18n="pub.show_abstract">Show abstract</span>
+              </button>
+              <div class="pub-preview__abstract">
+                <p data-i18n="pub.placeholder_abstract">Abstract — to fill.</p>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="pub-preview">
+              <a href="#" target="_blank" rel="noopener" class="pub-preview__link">
+                <div class="pub-preview__cover">
+                  <img src="assets/publications/paper_3.png" alt="" loading="lazy"
+                    onerror="this.classList.add('is-missing')" />
+                </div>
+                <div class="pub-preview__content">
+                  <h4 class="pub-preview__title" data-i18n="pub.placeholder_title">Article title — to fill</h4>
+                  <p class="pub-preview__journal" data-i18n="pub.placeholder_journal">Journal name</p>
+                  <p class="pub-preview__year">2023</p>
+                </div>
+              </a>
+              <button class="pub-preview__toggle" type="button" aria-expanded="false">
+                <span class="pub-preview__toggle-icon" aria-hidden="true">+</span>
+                <span class="pub-preview__toggle-label" data-i18n="pub.show_abstract">Show abstract</span>
+              </button>
+              <div class="pub-preview__abstract">
+                <p data-i18n="pub.placeholder_abstract">Abstract — to fill.</p>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="section section--contact" aria-labelledby="contact-title">
+        <p class="contact__overline" data-i18n="contact.overline">06. What's next?</p>
+        <h2 id="contact-title" class="contact__title" data-i18n="contact.title">Get in touch</h2>
+        <p class="contact__lede" data-i18n="contact.lede">
+          Open to opportunities in radiation protection, medical physics, accelerator R&D and nuclear engineering.
+          Happy to talk about FLUKA, FLASH-VHEE, electron clouds — or all three.
+        </p>
+        <a href="mailto:q.duong13@gmail.com" class="contact__btn" data-i18n="contact.cta">Say hello</a>
+
+        <div class="contact__alts">
+          <a href="https://www.linkedin.com/in/duong-q" target="_blank" rel="noopener">LinkedIn</a>
+          <span aria-hidden="true">·</span>
+          <a href="tel:+33760841191">+33 7 60 84 11 91</a>
+          <span aria-hidden="true">·</span>
+          <a href="assets/cv/CV_Quentin_DUONG.pdf" target="_blank" rel="noopener" data-i18n="contact.cv">Download CV</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          <span data-i18n="footer.designed">Designed & built by Quentin DUONG</span>
+          · <a href="https://github.com/" target="_blank" rel="noopener" id="github-link">GitHub</a>
+          · © <span id="year"></span>
+        </p>
+        <p class="footer__small" data-i18n="footer.small">No tracking · No cookies · Static site</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/logos.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/spotlight.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
