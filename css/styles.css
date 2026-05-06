@@ -212,7 +212,7 @@ svg {
 }
 
 .side__name {
-  font-size: clamp(1.85rem, 3.6vw, 2.48rem);
+  font-size: clamp(1.85rem, 3.6vw, 2.475rem);
   font-weight: 600;
   letter-spacing: -.02em;
   color: var(--lightest);
