@@ -577,7 +577,8 @@ svg {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: start;          /* both columns start flush at row top */
+  align-items: start;
+  /* both columns start flush at row top */
   gap: 2.5rem;
   margin-bottom: 2.5rem;
 }
@@ -589,8 +590,8 @@ svg {
 /* Force both children of every exp-item to live on the same grid row.
    Without this, the auto-flow placement puts the left-side card in row 2
    when the date is declared first in DOM order with grid-column: 2. */
-.exp-item > .exp-card,
-.exp-item > .exp-date--external {
+.exp-item>.exp-card,
+.exp-item>.exp-date--external {
   grid-row: 1;
 }
 
@@ -607,12 +608,21 @@ svg {
   color: var(--accent);
   letter-spacing: .04em;
   align-self: start;
-  padding-top: 1.2rem;          /* visually align with the card's title */
+  padding-top: 1.2rem;
+  /* visually align with the card's title */
   margin: 0;
   white-space: nowrap;
 }
-.exp-item--left  .exp-date--external { grid-column: 2; text-align: left;  }
-.exp-item--right .exp-date--external { grid-column: 1; text-align: right; }
+
+.exp-item--left .exp-date--external {
+  grid-column: 2;
+  text-align: left;
+}
+
+.exp-item--right .exp-date--external {
+  grid-column: 1;
+  text-align: right;
+}
 
 .exp-item--right .exp-card {
   grid-column: 2;
@@ -645,6 +655,7 @@ svg {
   border-radius: var(--radius);
   transition: border-color .2s var(--ease);
 }
+
 .exp-card:hover {
   border-color: rgba(100, 255, 218, .4);
 }
@@ -659,6 +670,7 @@ svg {
   text-align: inherit;
   user-select: none;
 }
+
 .exp-card__head:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: -2px;
@@ -689,14 +701,24 @@ svg {
   z-index: 2;
   transition: background .15s var(--ease), color .15s var(--ease), transform .2s var(--ease);
 }
-.exp-card__toggle::before { content: '+'; display: block; line-height: 1; }
-.exp-card.is-expanded .exp-card__toggle::before { content: '−'; }
+
+.exp-card__toggle::before {
+  content: '+';
+  display: block;
+  line-height: 1;
+}
+
+.exp-card.is-expanded .exp-card__toggle::before {
+  content: '−';
+}
+
 .exp-card__toggle:hover {
   /* Pill stays opaque navy; +/− glyph keeps its mint colour.
      The hover affordance lives on the card border, not on the button. */
   background: var(--bg);
   transform: translateX(-50%) scale(1.06);
 }
+
 .exp-card__toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -714,6 +736,7 @@ svg {
   overflow: hidden;
   transition: max-height .35s var(--ease);
 }
+
 .exp-card__body .bullets {
   padding: 0 1.25rem 1.1rem;
 }
@@ -771,16 +794,29 @@ svg {
     display: block;
     line-height: 0;
   }
+
   .exp-card__head .exp-org-icon img.lg-icon {
     margin: 0;
     vertical-align: top;
   }
+
   /* Right-side card → icon in middle-right of the head */
-  .exp-item--right .exp-card__head .exp-org-icon { right: 1.1rem; }
-  .exp-item--right .exp-card__head { padding-right: calc(var(--icon-size) + 2rem); }
+  .exp-item--right .exp-card__head .exp-org-icon {
+    right: 1.1rem;
+  }
+
+  .exp-item--right .exp-card__head {
+    padding-right: calc(var(--icon-size) + 2rem);
+  }
+
   /* Left-side card → icon in middle-left of the head */
-  .exp-item--left  .exp-card__head .exp-org-icon { left: 1.1rem; }
-  .exp-item--left  .exp-card__head { padding-left:  calc(var(--icon-size) + 2rem); }
+  .exp-item--left .exp-card__head .exp-org-icon {
+    left: 1.1rem;
+  }
+
+  .exp-item--left .exp-card__head {
+    padding-left: calc(var(--icon-size) + 2rem);
+  }
 }
 
 /* Right-aligned cards: bullets aligned right too */
@@ -815,7 +851,8 @@ svg {
     grid-column: 1;
     text-align: left;
   }
-  .exp-item--left  .exp-date--external,
+
+  .exp-item--left .exp-date--external,
   .exp-item--right .exp-date--external {
     grid-column: 1;
     text-align: left;
@@ -1030,6 +1067,7 @@ svg {
   height: var(--icon-size);
   line-height: 0;
 }
+
 .edu-list__icon-wrap img.lg-icon {
   margin: 0;
   vertical-align: top;
@@ -1289,6 +1327,7 @@ svg {
   overflow: hidden;
   transition: border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
 }
+
 .pub-preview:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
@@ -1310,22 +1349,28 @@ svg {
   overflow: hidden;
   background: var(--bg);
 }
+
 .pub-preview__cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;       /* show the top of the page */
+  object-position: top center;
+  /* show the top of the page */
   display: block;
   transition: filter .3s var(--ease), opacity .3s var(--ease);
 }
-.pub-preview__cover img.is-missing { visibility: hidden; }
+
+.pub-preview__cover img.is-missing {
+  visibility: hidden;
+}
 
 /* Placeholder when the file is missing */
 .pub-preview:has(img.is-missing) .pub-preview__cover {
   background:
     linear-gradient(135deg, var(--bg-soft), var(--bg-elev)),
-    repeating-linear-gradient(45deg, transparent 0 12px, rgba(100,255,218,0.04) 12px 13px);
+    repeating-linear-gradient(45deg, transparent 0 12px, rgba(100, 255, 218, 0.04) 12px 13px);
 }
+
 .pub-preview:has(img.is-missing) .pub-preview__cover::before {
   content: 'Document preview';
   position: absolute;
@@ -1348,8 +1393,10 @@ svg {
   flex-direction: column;
   justify-content: center;
   gap: .25rem;
-  min-width: 0;          /* allow long titles to truncate gracefully */
+  min-width: 0;
+  /* allow long titles to truncate gracefully */
 }
+
 .pub-preview__title {
   font-size: .98rem;
   font-weight: 500;
@@ -1361,6 +1408,7 @@ svg {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 .pub-preview__journal {
   font-family: var(--font-mono);
   font-size: .76rem;
@@ -1370,6 +1418,7 @@ svg {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .pub-preview__year {
   font-family: var(--font-mono);
   font-size: .72rem;
@@ -1382,6 +1431,7 @@ svg {
   filter: blur(5px);
   opacity: .55;
 }
+
 .pub-preview.is-reviewing .pub-preview__cover::after {
   content: 'Reviewing';
   position: absolute;
@@ -1419,13 +1469,16 @@ svg {
   gap: .4rem;
   transition: background .15s var(--ease);
 }
+
 .pub-preview__toggle:hover {
   background: rgba(100, 255, 218, 0.05);
 }
+
 .pub-preview__toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: -2px;
 }
+
 .pub-preview__toggle-icon {
   display: inline-block;
   width: 1ch;
@@ -1439,10 +1492,13 @@ svg {
   overflow: hidden;
   transition: max-height .35s var(--ease);
   border-top: 1px solid var(--line);
+  text-align: justify;
 }
+
 .pub-preview.is-expanded .pub-preview__abstract {
   /* max-height set by JS to match scrollHeight */
 }
+
 .pub-preview__abstract p {
   padding: .9rem 1.1rem 1rem;
   margin: 0;
@@ -1457,6 +1513,7 @@ svg {
     grid-template-columns: 1fr;
     min-height: 0;
   }
+
   .pub-preview__cover {
     aspect-ratio: 16 / 7;
   }

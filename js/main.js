@@ -35,7 +35,7 @@
       const key = el.getAttribute('data-i18n');
       const val = getNested(dict, key);
       if (typeof val === 'string') {
-        if (/<\/?(em|strong|br|i|b|a|span)/i.test(val)) {
+        if (/<\/?(em|strong|br|i|b|a|span)/i.test(val) || /\\\(|\\\[|\$/.test(val)) {
           el.innerHTML = val;
         } else {
           el.textContent = val;
@@ -72,6 +72,11 @@
         const body = card.querySelector('.pub-preview__abstract');
         if (body && expanded) body.style.maxHeight = body.scrollHeight + 'px';
       });
+
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        MathJax.typesetPromise();
+      }
+
     });
   }
 
@@ -321,7 +326,7 @@
       const lang = localStorage.getItem('qd-lang') || 'en';
       const labels = (lang === 'fr')
         ? { show: 'Voir le résumé', hide: 'Masquer le résumé' }
-        : { show: 'Show abstract',  hide: 'Hide abstract'  };
+        : { show: 'Show abstract', hide: 'Hide abstract' };
 
       // Re-read current dictionary if available
       function getLabels() {
