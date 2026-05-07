@@ -14,7 +14,7 @@
   const CONFIG = {
     orcidId: '0009-0006-5030-3757',  // e.g. '0000-0002-1825-0097'
     scholarId: '',                  // e.g. 'XXXXXXXXAAJ'
-    githubHandle: 'qduong',
+    githubHandle: 'duongque',
     thesisUrl: 'https://theses.hal.science/tel-05443980',
     defaultLang: 'en'
   };
