@@ -33,21 +33,21 @@ window.I18N = {
     },
     exp: {
       now: "Present",
-      cern_role: "Doctoral Researcher - Accelerator Physics",
+      fr_role: "R&D Engineer - Automation & Data",
+      fr_b1: "End-to-end pipeline for processing unstructured PDF documents.",
+      fr_b2: "AI-assisted information extraction with LLM APIs, automated structuring and traceable archival.",
+      fr_b3: "Python, async I/O, schema validation, integration tests.",
+      cern_role: "Accelerator Physics Researcher",
       cern_b1: "Three-year doctoral programme on the measurement and characterisation of the electron cloud in the LHC using the Vacuum Pilot Sector.",
       cern_b2: "Built and ran an analysis pipeline over <strong>7000+ LHC fills</strong> (2015-2025) - extraction, standardisation and archival.",
       cern_b3: "Routine work in radioactive environments with precision instrumentation; calibration, troubleshooting, in-tunnel access.",
       cern_b4: "Participated in <strong>CLEAR</strong> operations - the 200 MeV electron linac dedicated to FLASH-VHEE research.",
       cern_b5: "Trained on PyECLOUD, COMSOL multiphysics and FLUKA Monte Carlo transport.",
-      fr_role: "R&D Engineer - Automation & Data",
-      fr_b1: "End-to-end pipeline for processing unstructured PDF documents.",
-      fr_b2: "AI-assisted information extraction with LLM APIs, automated structuring and traceable archival.",
-      fr_b3: "Python, async I/O, schema validation, integration tests.",
-      kek_role: "Visiting Researcher - Particle Physics",
+      kek_role: "Particle Physics Researcher",
       kek_b1: "Five-month internship on cosmic muon measurement in an underground cavern with the COMET experiment at J-PARC.",
       kek_b2: "Cosmic muons used as reference particles for dosimetric calibration of gas detectors.",
       kek_b3: "Long-duration acquisition (C++), advanced statistical analysis.",
-      edf_role: "Engineering Intern - Nuclear Safety Computations",
+      edf_role: "Nuclear Safety Computations Engineer",
       edf_b1: "Two-month internship on the automation of safety computations for nuclear power plant steam generators.",
       edf_b2: "VBA / scripting, code review, regression testing on legacy tooling."
     },
@@ -55,14 +55,15 @@ window.I18N = {
       title: "Education"
     },
     edu: {
-      phd_honor: "With the jury's congratulations",
+      cas: "11-day intensive course organised by the CERN Accelerator School (CAS) in collaboration with Riga Technical University, covering medical applications of particle accelerators: radiobiology and oncology, beam delivery systems in clinical settings (linacs, cyclotrons, synchrotrons), short-lived radioisotope production for medical imaging (PET/SPECT), advanced radiotherapy techniques, nuclear medicine, and associated regulatory framework.",
+      phd_honor: "Highest Honours",
       phd_thesis: "<em>Thesis:</em> Study of the electron cloud in the CERN LHC with the Vacuum Pilot Sector.",
       ifast: "10 intensive days on medical innovation through accelerators. Team proposal: \"Destruction of fibrosis by anti-fibrotic nanoparticles activated by FLASH irradiation.\"",
       juas: "Accelerator design, beam dynamics & instrumentation, collective effects, magnets, synchrotron radiation, cryogenics, RF, vacuum systems.",
       nuclear: "Advanced nuclear physics - Plasma physics - Nuclear fusion.",
       phelma: "Reactor physics, nuclear physics, radiation-matter interaction & dosimetry, radiation protection, neutron transport simulation, thermohydraulics.",
-      honors_high: "High distinction",
-      honors: "Distinction"
+      honors_high: "High Honours",
+      honors: "Honours"
     },
     projects: {
       title: "Some things I've built",
@@ -87,13 +88,13 @@ window.I18N = {
       o6_desc: "End-to-end automation: fetch, parse, validate, archive, query. Python & standardised schemas."
     },
     skills: {
-      g_lang:    "Languages & Scripting",
-      g_sim:     "Simulation & Modelling",
-      g_data:    "Data Analysis & Scientific Computing",
-      g_inst:    "Instrumentation & Acquisition",
-      g_dev:     "Dev, Automation & AI",
-      lvl_adv:   "Advanced",
-      lvl_int:   "Intermediate",
+      g_lang: "Languages & Scripting",
+      g_sim: "Simulation & Modelling",
+      g_data: "Data Analysis & Scientific Computing",
+      g_inst: "Instrumentation & Acquisition",
+      g_dev: "Dev, Automation & AI",
+      lvl_adv: "Advanced",
+      lvl_int: "Intermediate",
       lvl_basic: "Basic"
     },
     publications: {
@@ -160,21 +161,21 @@ window.I18N = {
     },
     exp: {
       now: "Aujourd'hui",
-      cern_role: "Doctorant - Physique des accélérateurs",
+      fr_role: "Ingénieur R&D - Automatisation & Data",
+      fr_b1: "Pipeline end-to-end pour le traitement de documents PDF non structurés.",
+      fr_b2: "Extraction d'information assistée par IA avec API LLM, structuration automatisée et archivage traçable.",
+      fr_b3: "Python, I/O asynchrones, validation de schémas, tests d'intégration.",
+      cern_role: "Chercheur en Physique des Accélérateurs",
       cern_b1: "Programme doctoral de 3 ans sur la mesure et la caractérisation du nuage d'électrons dans le LHC à l'aide du Vacuum Pilot Sector.",
       cern_b2: "Conception et exploitation d'un pipeline d'analyse sur <strong>7000+ fills LHC</strong> (2015-2025) - extraction, standardisation et archivage.",
       cern_b3: "Travail régulier en environnement radioactif avec instruments de précision ; étalonnage, dépannage, accès tunnel.",
       cern_b4: "Participation à l'opération de <strong>CLEAR</strong> - linac électrons de 200 MeV dédié à la recherche FLASH-VHEE.",
       cern_b5: "Formation sur PyECLOUD, COMSOL multiphysique et le code Monte Carlo FLUKA.",
-      fr_role: "Ingénieur R&D - Automatisation & Data",
-      fr_b1: "Pipeline end-to-end pour le traitement de documents PDF non structurés.",
-      fr_b2: "Extraction d'information assistée par IA avec API LLM, structuration automatisée et archivage traçable.",
-      fr_b3: "Python, I/O asynchrones, validation de schémas, tests d'intégration.",
-      kek_role: "Chercheur invité - Physique des particules",
+      kek_role: "Chercheur en Physique des Particules",
       kek_b1: "Stage de 5 mois sur la mesure de muons cosmiques dans une caverne souterraine avec l'expérience COMET au J-PARC.",
       kek_b2: "Muons cosmiques utilisés comme particules de référence pour l'étalonnage dosimétrique de détecteurs gazeux.",
       kek_b3: "Acquisition longue durée (C++), analyse statistique avancée.",
-      edf_role: "Stagiaire ingénieur - Calculs de sûreté nucléaire",
+      edf_role: "Ingénieur en Calculs de Sûreté Nucléaire",
       edf_b1: "Stage de 2 mois sur l'automatisation des calculs de sûreté pour les générateurs de vapeur de centrales nucléaires.",
       edf_b2: "VBA / scripting, revue de code, tests de non-régression sur outils legacy."
     },
@@ -182,6 +183,7 @@ window.I18N = {
       title: "Formation"
     },
     edu: {
+      cas: "11 jours de formation intensive organisée par la CERN Accelerator School (CAS) en collaboration avec l'Université Technique de Riga, couvrant les applications médicales des accélérateurs de particules : radiobiologie et oncologie, systèmes de délivrance de faisceau en environnement clinique (linacs, cyclotrons, synchrotrons), production de radio-isotopes pour l'imagerie médicale (TEP/SPECT), techniques avancées de radiothérapie, médecine nucléaire et cadre réglementaire associé.",
       phd_honor: "Félicitations du jury",
       phd_thesis: "<em>Thèse :</em> Étude du nuage d'électrons dans le LHC du CERN avec le Vacuum Pilot Sector.",
       ifast: "10 jours intensifs sur l'innovation médicale par accélérateurs. Proposition d'équipe : « Destruction de fibrose par nanoparticules anti-fibrotiques activées par irradiation FLASH ».",
@@ -214,13 +216,13 @@ window.I18N = {
       o6_desc: "Automatisation complète : fetch, parsing, validation, archivage, requêtage. Python & schémas standardisés."
     },
     skills: {
-      g_lang:    "Langages & scripts",
-      g_sim:     "Simulation & modélisation",
-      g_data:    "Analyse de données & calcul scientifique",
-      g_inst:    "Instrumentation & acquisition",
-      g_dev:     "Dev, automatisation & IA",
-      lvl_adv:   "Avancé",
-      lvl_int:   "Intermédiaire",
+      g_lang: "Langages & scripts",
+      g_sim: "Simulation & modélisation",
+      g_data: "Analyse de données & calcul scientifique",
+      g_inst: "Instrumentation & acquisition",
+      g_dev: "Dev, automatisation & IA",
+      lvl_adv: "Avancé",
+      lvl_int: "Intermédiaire",
       lvl_basic: "Notions"
     },
     publications: {

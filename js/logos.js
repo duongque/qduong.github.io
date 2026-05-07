@@ -65,6 +65,7 @@
     juas: 'juas.svg',
 
     // Schools
+    'cas': 'cas.svg',
     'paris-saclay': 'paris-saclay.svg',
     'grenoble-inp': 'grenoble-inp.svg',
     'phelma': 'phelma.svg',
@@ -115,6 +116,7 @@
     ifast: 'i-FAST',
     juas: 'JUAS',
 
+    'cas': 'CERN Accelerator School',
     'paris-saclay': 'Université Paris-Saclay',
     'grenoble-inp': 'Grenoble INP',
     'phelma': 'Grenoble INP – PHELMA',
