@@ -448,6 +448,7 @@ svg {
 .prose p {
   margin-bottom: 1rem;
   max-width: 60ch;
+  text-align: justify;
 }
 
 .prose p:last-of-type {
@@ -476,7 +477,11 @@ svg {
   gap: 1.25rem;
   margin-top: 1rem;
 }
-.skills__group { margin: 0; }
+
+.skills__group {
+  margin: 0;
+}
+
 .skills__group-title {
   font-family: var(--font-mono);
   font-size: .78rem;
@@ -486,6 +491,7 @@ svg {
   font-weight: 500;
   margin-bottom: .55rem;
 }
+
 .skills__list {
   list-style: none;
   display: grid;
@@ -508,17 +514,24 @@ svg {
   transition: border-color .2s var(--ease), background .2s var(--ease);
   list-style: none;
 }
+
 .skill:hover {
   border-color: var(--accent);
   background: var(--bg-elev);
 }
+
 .skill__chip {
   display: inline-block;
   width: var(--icon-size);
   height: var(--icon-size);
   line-height: 0;
 }
-.skill__chip img.lg-icon { margin: 0; vertical-align: top; }
+
+.skill__chip img.lg-icon {
+  margin: 0;
+  vertical-align: top;
+}
+
 .skill__name {
   font-family: var(--font-mono);
   font-size: .82rem;
@@ -528,6 +541,7 @@ svg {
   text-overflow: ellipsis;
   min-width: 0;
 }
+
 .skill__level {
   font-family: var(--font-mono);
   font-size: .66rem;
@@ -539,15 +553,18 @@ svg {
   color: var(--slate);
   white-space: nowrap;
 }
+
 .skill__level--adv {
   color: var(--accent);
   border-color: rgba(100, 255, 218, .35);
   background: rgba(100, 255, 218, .06);
 }
+
 .skill__level--int {
   color: var(--lightest);
   border-color: rgba(168, 178, 209, .25);
 }
+
 .skill__level--basic {
   color: var(--slate);
   border-color: var(--line);
