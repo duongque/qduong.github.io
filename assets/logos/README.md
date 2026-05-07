@@ -15,32 +15,54 @@ L'image cassée est automatiquement masquée. Le chip affiche alors simplement l
 
 ## Liste exhaustive des fichiers attendus
 
-### Langages & runtimes
+### Languages & Scripting
 
 | Clé          | Fichier            | Source officielle                                                      |
 |--------------|--------------------|------------------------------------------------------------------------|
-| `python`     | `python.svg`       | https://www.python.org/community/logos/  (logo "without text")         |
-| `cpp`        | `cpp.svg`          | https://isocpp.org/  (logo officiel ISO C++) ou https://devicon.dev    |
-| `c`          | `c.svg`            | https://devicon.dev/  (chercher "C")                                   |
-| `root`       | `root.svg`         | https://root.cern/about/logos/  (« ROOT data analysis framework »)     |
+| `python`     | `python.svg`       | https://www.python.org/community/logos/                                |
+| `cpp`        | `cpp.svg`          | https://isocpp.org/ ou https://devicon.dev (chercher C++)              |
+| `vba`        | `vba.svg`          | logo Microsoft Office / Excel — https://simpleicons.org/?q=excel       |
+| `latex`      | `latex.svg`        | https://www.latex-project.org/about/logos/  ou https://simpleicons.org/?q=latex |
 | `bash`       | `bash.svg`         | https://devicon.dev/ ou https://simpleicons.org/?q=gnu+bash            |
 | `powershell` | `powershell.svg`   | https://simpleicons.org/?q=powershell                                  |
-| `vba`        | `vba.svg`          | logo Microsoft Office / Excel — https://simpleicons.org/?q=excel       |
-| `labview`    | `labview.svg`      | https://www.ni.com/ (rechercher LabVIEW logo)                          |
+| `fortran`    | `fortran.svg`      | https://fortran-lang.org/  (logo en en-tête)                           |
+| `html`       | `html.svg`         | https://devicon.dev/ (HTML5)                                           |
 
-### Codes scientifiques
+### Simulation & Modelling
 
-| Clé        | Fichier         | Source officielle                                                      |
-|------------|-----------------|------------------------------------------------------------------------|
-| `fluka`    | `fluka.svg`     | https://fluka.cern/  (en-tête de page — clic droit, enregistrer)       |
-| `comsol`   | `comsol.svg`    | https://www.comsol.com/company/press-room  (kit de presse)             |
-| `pyecloud` | `pyecloud.svg`  | https://github.com/PyCOMPLETE/PyECLOUD  (pas de logo officiel — capture d'écran ou icône custom) |
-| `geant4`   | `geant4.svg`    | https://geant4.web.cern.ch/  (logo en haut à gauche)                   |
-| `mcnp`     | `mcnp.svg`      | https://mcnp.lanl.gov/  (logo LANL/MCNP)                               |
-| `madx`     | `madx.svg`      | https://mad.web.cern.ch/  (pas de logo officiel — capture ou texte)    |
-| `cst`      | `cst.svg`       | https://www.3ds.com/products/simulia/cst-studio-suite  (Dassault Systèmes) |
-| `hpc`      | `hpc.svg`       | icône générique — https://www.flaticon.com/search?word=server+rack    |
-| `ml`       | `ml.svg`        | icône générique — https://www.flaticon.com/search?word=neural+network |
+| Clé        | Fichier         | Source officielle                                                       |
+|------------|-----------------|-------------------------------------------------------------------------|
+| `pyecloud` | `pyecloud.svg`  | https://github.com/PyCOMPLETE/PyECLOUD (pas de logo officiel)           |
+| `fluka`    | `fluka.svg`     | https://fluka.cern/ (en-tête)                                           |
+| `comsol`   | `comsol.svg`    | https://www.comsol.com/company/press-room (kit de presse)               |
+| `madx`     | `madx.svg`      | https://mad.web.cern.ch/ (pas de logo officiel)                         |
+| `dragon`   | `dragon.svg`    | https://www.polymtl.ca/merlin/  (groupe DRAGON, Polytechnique Montréal) |
+
+### Data Analysis & Scientific Computing
+
+| Clé      | Fichier       | Source officielle                                                       |
+|----------|---------------|-------------------------------------------------------------------------|
+| `numpy`  | `numpy.svg`   | https://numpy.org/  (icône en en-tête)                                  |
+| `root`   | `root.svg`    | https://root.cern/about/logos/                                          |
+| `timber` | `timber.svg`  | https://nxcals-docs.web.cern.ch/  (pas de logo officiel — texte)        |
+| `jupyter`| `jupyter.svg` | https://jupyter.org/  (logo "planet")                                   |
+| `sklearn`| `sklearn.svg` | https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png     |
+| `sql`    | `sql.svg`     | https://www.sqlite.org/  ou logo générique base de données              |
+
+### Instrumentation & Acquisition
+
+| Clé      | Fichier       | Source officielle                                                       |
+|----------|---------------|-------------------------------------------------------------------------|
+| `labview`| `labview.svg` | https://www.ni.com/  (rechercher LabVIEW logo)                          |
+| `gpib`   | `gpib.svg`    | générique — pas de logo officiel (utiliser une icône "RS-232" / "GPIB") |
+
+### Dev, Automation & AI
+
+| Clé      | Fichier       | Source officielle                                                       |
+|----------|---------------|-------------------------------------------------------------------------|
+| `git`    | `git.svg`     | https://git-scm.com/downloads/logos                                     |
+| `vscode` | `vscode.svg`  | https://code.visualstudio.com/brand                                     |
+| `llmapi` | `llmapi.svg`  | générique IA — par exemple icône "robot" ou "brain"                     |
 
 ### Organisations
 

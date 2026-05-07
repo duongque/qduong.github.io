@@ -73,10 +73,8 @@
       <div class="side__inner">
         <header class="side__header">
           <h1 class="side__name">Dr. Quentin DUONG</h1>
-          <p class="side__role" data-i18n="side.role">Accelerator Physicist & Nuclear Engineer</p>
-          <p class="side__tagline" data-i18n="side.tagline">
-            I build expertise at the interface of accelerator physics, radiation protection and medical applications.
-          </p>
+          <p class="side__role" data-i18n="side.role"></p>
+          <p class="side__tagline" data-i18n="side.tagline"></p>
         </header>
 
         <nav class="side-nav" aria-label="Section navigation">
@@ -150,10 +148,8 @@
       <!-- Mobile-only intro (top of page on small screens) -->
       <header class="mobile-intro">
         <h1>Quentin DUONG</h1>
-        <p class="mobile-intro__role" data-i18n="side.role">Accelerator Physicist & Nuclear Engineer</p>
-        <p class="mobile-intro__tagline" data-i18n="side.tagline">
-          I build expertise at the interface of accelerator physics, radiation protection and medical applications.
-        </p>
+        <p class="mobile-intro__role" data-i18n="side.role"></p>
+        <p class="mobile-intro__tagline" data-i18n="side.tagline"></p>
       </header>
       <img src="assets/photo.jpg" alt="Quentin DUONG" class="hero__photo" />
 
@@ -169,20 +165,111 @@
           <p data-i18n="about.tools_intro"></p>
         </div>
 
-        <ul class="skills-grid" aria-label="Tools and codes">
-          <li data-logo="fluka"></li>
-          <li data-logo="comsol"></li>
-          <li data-logo="pyecloud"></li>
-          <li data-logo="geant4"></li>
-          <li data-logo="mcnp"></li>
-          <li data-logo="madx"></li>
-          <li data-logo="cst"></li>
-          <li data-logo="python"></li>
-          <li data-logo="cpp"></li>
-          <li data-logo="root"></li>
-          <li data-logo="hpc"></li>
-          <li data-logo="labview"></li>
-        </ul>
+        <div class="skills" aria-label="Tools and codes">
+
+          <section class="skills__group">
+            <h4 class="skills__group-title" data-i18n="skills.g_lang">Languages & Scripting</h4>
+            <ul class="skills__list">
+              <li class="skill"><span class="skill__chip" data-logo-icon="python" aria-hidden="true"></span><span
+                  class="skill__name">Python</span><span class="skill__level skill__level--adv"
+                  data-i18n="skills.lvl_adv">Advanced</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="cpp" aria-hidden="true"></span><span
+                  class="skill__name">C / C++</span><span class="skill__level skill__level--adv"
+                  data-i18n="skills.lvl_adv">Advanced</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="vba" aria-hidden="true"></span><span
+                  class="skill__name">VBA</span><span class="skill__level skill__level--adv"
+                  data-i18n="skills.lvl_adv">Advanced</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="latex" aria-hidden="true"></span><span
+                  class="skill__name">LaTeX</span><span class="skill__level skill__level--adv"
+                  data-i18n="skills.lvl_adv">Advanced</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="bash" aria-hidden="true"></span><span
+                  class="skill__name">Bash</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="powershell" aria-hidden="true"></span><span
+                  class="skill__name">PowerShell</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="fortran" aria-hidden="true"></span><span
+                  class="skill__name">Fortran</span><span class="skill__level skill__level--basic"
+                  data-i18n="skills.lvl_basic">Basic</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="html" aria-hidden="true"></span><span
+                  class="skill__name">HTML</span><span class="skill__level skill__level--basic"
+                  data-i18n="skills.lvl_basic">Basic</span></li>
+            </ul>
+          </section>
+
+          <section class="skills__group">
+            <h4 class="skills__group-title" data-i18n="skills.g_sim">Simulation & Modelling</h4>
+            <ul class="skills__list">
+              <li class="skill"><span class="skill__chip" data-logo-icon="cern" aria-hidden="true"></span><span
+                  class="skill__name">PyECLOUD</span><span class="skill__level skill__level--adv"
+                  data-i18n="skills.lvl_adv">Advanced</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="fluka" aria-hidden="true"></span><span
+                  class="skill__name">FLUKA <br> (Monte Carlo)</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="comsol" aria-hidden="true"></span><span
+                  class="skill__name">COMSOL <br> Multiphysics</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="cern" aria-hidden="true"></span><span
+                  class="skill__name">MAD-X</span><span class="skill__level skill__level--basic"
+                  data-i18n="skills.lvl_basic">Basic</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="dragon" aria-hidden="true"></span><span
+                  class="skill__name">DRAGON <br> (Monte Carlo)</span><span class="skill__level skill__level--basic"
+                  data-i18n="skills.lvl_basic">Basic</span></li>
+            </ul>
+          </section>
+
+          <section class="skills__group">
+            <h4 class="skills__group-title" data-i18n="skills.g_data">Data Analysis & Scientific Computing</h4>
+            <ul class="skills__list">
+              <li class="skill"><span class="skill__chip" data-logo-icon="python" aria-hidden="true"></span><span
+                  class="skill__name">NumPy / SciPy <br> Pandas / Matplotlib</span><span
+                  class="skill__level skill__level--adv" data-i18n="skills.lvl_adv">Advanced</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="root" aria-hidden="true"></span><span
+                  class="skill__name">ROOT</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="cern" aria-hidden="true"></span><span
+                  class="skill__name">TIMBER / NXCALS</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="jupyter" aria-hidden="true"></span><span
+                  class="skill__name">Jupyter <br> Notebook</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="sklearn" aria-hidden="true"></span><span
+                  class="skill__name">scikit-learn</span><span class="skill__level skill__level--basic"
+                  data-i18n="skills.lvl_basic">Basic</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="sql" aria-hidden="true"></span><span
+                  class="skill__name">SQL / SQLite</span><span class="skill__level skill__level--basic"
+                  data-i18n="skills.lvl_basic">Basic</span></li>
+            </ul>
+          </section>
+
+          <section class="skills__group">
+            <h4 class="skills__group-title" data-i18n="skills.g_inst">Instrumentation & Acquisition</h4>
+            <ul class="skills__list">
+              <li class="skill"><span class="skill__chip" data-logo-icon="labview" aria-hidden="true"></span><span
+                  class="skill__name">LabVIEW</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="gpib" aria-hidden="true"></span><span
+                  class="skill__name">GPIB / VISA <br> protocols</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+            </ul>
+          </section>
+
+          <section class="skills__group">
+            <h4 class="skills__group-title" data-i18n="skills.g_dev">Dev, Automation & AI</h4>
+            <ul class="skills__list">
+              <li class="skill"><span class="skill__chip" data-logo-icon="git" aria-hidden="true"></span><span
+                  class="skill__name">Git / GitHub</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="vscode" aria-hidden="true"></span><span
+                  class="skill__name">VS Code</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+              <li class="skill"><span class="skill__chip" data-logo-icon="llmapi" aria-hidden="true"></span><span
+                  class="skill__name">LLM API <br> integration</span><span class="skill__level skill__level--int"
+                  data-i18n="skills.lvl_int">Intermediate</span></li>
+            </ul>
+          </section>
+
+        </div>
       </section>
 
       <!-- ===== EXPERIENCE ===== -->

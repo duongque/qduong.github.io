@@ -21,28 +21,41 @@
   // Adjust to .png if that's what you downloaded for that key.
   // ---------------------------------------------------------
   const FILES = {
-    // Languages
+    // Languages & scripting
     python: 'python.svg',
     cpp: 'cpp.svg',
-    c: 'c.svg',
-    root: 'root.svg',
+    vba: 'vba.svg',
+    latex: 'latex.svg',
     bash: 'bash.svg',
     powershell: 'powershell.svg',
-    vba: 'vba.svg',
-    labview: 'labview.svg',
+    fortran: 'fortran.svg',
+    html: 'html.svg',
 
-    // Scientific codes
+    // Simulation & modelling
+    pyecloud: 'pyecloud.svg',
     fluka: 'fluka.svg',
     comsol: 'comsol.svg',
-    pyecloud: 'pyecloud.svg',
-    geant4: 'geant4.svg',
-    mcnp: 'mcnp.svg',
     madx: 'madx.svg',
-    cst: 'cst.svg',
-    hpc: 'hpc.svg',
-    ml: 'ml.svg',
+    dragon: 'dragon.svg',
 
-    // Organisations
+    // Data analysis & scientific computing
+    numpy: 'numpy.svg',
+    root: 'root.svg',
+    timber: 'timber.svg',
+    jupyter: 'jupyter.svg',
+    sklearn: 'sklearn.svg',
+    sql: 'sql.svg',
+
+    // Instrumentation & acquisition
+    labview: 'labview.svg',
+    gpib: 'gpib.svg',
+
+    // Dev, automation & AI
+    git: 'git.svg',
+    vscode: 'vscode.svg',
+    llmapi: 'llmapi.svg',
+
+    // Organisations (Experience tabs / Education)
     cern: 'cern.svg',
     kek: 'kek.svg',
     edf: 'edf.svg',
@@ -57,32 +70,42 @@
     'phelma': 'phelma.svg',
     'grenoble-alpes': 'grenoble-alpes.svg',
 
-    // Generic fallbacks (used when no specific logo)
+    // Generic fallbacks
     building: 'building.svg',
     school: 'school.svg',
     atom: 'atom.svg'
   };
 
-  // Human-readable labels used in chips (key -> displayed name)
+  // Human-readable labels (used in chips when chip mode is invoked)
   const LABEL = {
     python: 'Python',
     cpp: 'C / C++',
-    c: 'C',
-    root: 'ROOT',
+    vba: 'VBA',
+    latex: 'LaTeX',
     bash: 'Bash',
     powershell: 'PowerShell',
-    vba: 'VBA',
-    labview: 'LabVIEW',
+    fortran: 'Fortran',
+    html: 'HTML',
 
+    pyecloud: 'PyECLOUD',
     fluka: 'FLUKA',
     comsol: 'COMSOL',
-    pyecloud: 'PyECLOUD',
-    geant4: 'Geant4',
-    mcnp: 'MCNP',
     madx: 'MAD-X',
-    cst: 'CST',
-    hpc: 'HPC clusters',
-    ml: 'Machine Learning',
+    dragon: 'DRAGON',
+
+    numpy: 'NumPy / SciPy / Pandas',
+    root: 'ROOT',
+    timber: 'TIMBER / NXCALS',
+    jupyter: 'Jupyter',
+    sklearn: 'scikit-learn',
+    sql: 'SQL / SQLite',
+
+    labview: 'LabVIEW',
+    gpib: 'GPIB / VISA',
+
+    git: 'Git / GitHub',
+    vscode: 'VS Code',
+    llmapi: 'LLM API',
 
     cern: 'CERN',
     kek: 'KEK / J-PARC',

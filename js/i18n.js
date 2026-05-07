@@ -17,7 +17,7 @@ window.I18N = {
       contact: "Contact"
     },
     side: {
-      role: "Accelerator Physicist & Nuclear Engineer",
+      role: "Accelerator Physicist <br> Nuclear Engineer",
       tagline: "I build expertise at the interface of accelerator physics, radiation protection and medical applications.",
       footer: "Built & deployed via GitHub Pages."
     },
@@ -86,6 +86,16 @@ window.I18N = {
       o6_title: "Data pipeline - 7000+ LHC fills",
       o6_desc: "End-to-end automation: fetch, parse, validate, archive, query. Python & standardised schemas."
     },
+    skills: {
+      g_lang:    "Languages & Scripting",
+      g_sim:     "Simulation & Modelling",
+      g_data:    "Data Analysis & Scientific Computing",
+      g_inst:    "Instrumentation & Acquisition",
+      g_dev:     "Dev, Automation & AI",
+      lvl_adv:   "Advanced",
+      lvl_int:   "Intermediate",
+      lvl_basic: "Basic"
+    },
     publications: {
       title: "Publications & Thesis"
     },
@@ -134,7 +144,7 @@ window.I18N = {
       contact: "Contact"
     },
     side: {
-      role: "Physicien des Accélérateurs & Ingénieur Nucléaire",
+      role: "Physicien des Accélérateurs <br> Ingénieur Nucléaire",
       tagline: "Une expertise à l'interface de la physique des accélérateurs, de la radioprotection et des applications médicales.",
       footer: "Réalisé & déployé via GitHub Pages."
     },
@@ -202,6 +212,16 @@ window.I18N = {
       o5_desc: "Comparaison inter-codes, benchmark, étude de dépôt de dose.",
       o6_title: "Pipeline de données - 7000+ fills LHC",
       o6_desc: "Automatisation complète : fetch, parsing, validation, archivage, requêtage. Python & schémas standardisés."
+    },
+    skills: {
+      g_lang:    "Langages & scripts",
+      g_sim:     "Simulation & modélisation",
+      g_data:    "Analyse de données & calcul scientifique",
+      g_inst:    "Instrumentation & acquisition",
+      g_dev:     "Dev, automatisation & IA",
+      lvl_adv:   "Avancé",
+      lvl_int:   "Intermédiaire",
+      lvl_basic: "Notions"
     },
     publications: {
       title: "Publications & Thèse"
