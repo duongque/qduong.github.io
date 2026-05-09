@@ -23,9 +23,9 @@ window.I18N = {
     },
     about: {
       title: "About",
-      p1: "I am a PhD in accelerator physics (Universite Paris-Saclay, December 2025, with the jury's congratulations) and a nuclear engineer trained at <a href=\"https://phelma.grenoble-inp.fr/\" target=\"_blank\" rel=\"noopener\">Grenoble INP - PHELMA</a>. My doctoral research, conducted at <a href=\"https://home.cern/\" target=\"_blank\" rel=\"noopener\">CERN</a> under Dr. Vincent Baglin, focused on the measurement and characterisation of the electron cloud in the LHC using the Vacuum Pilot Sector.",
-      p2: "My career vision is clear: contribute to <span class=\"hl\">radiation protection</span>, <span class=\"hl\">dosimetry</span> and the <span class=\"hl\">medical applications of particle accelerators</span> - FLASH-VHEE radiotherapy, hadron therapy, and the safety of large-scale facilities. I value standardisation, precision and clear scientific communication, and I invest personal time in deepening my expertise on FLUKA, radiation safety regulations and modern data pipelines.",
-      p3: "Beyond research, I enjoy cooking, cinema, martial arts and physics - the kind of curiosity that doesn't switch off.",
+      p1: "From nuclear reactors to particle accelerators, I have always been driven by the physics of radiation-matter interaction. Applied to nuclear medicine and radiation protection, this field goes beyond intellectual stimulation to become a physics that heals and protects.",
+      p2: "PhD in Accelerator Physics (Université Paris-Saclay, highest honours) and Nuclear Engineer (Grenoble INP - PHELMA), I conducted my thesis at CERN under the supervision of Dr. Gaël Sattonnay (CNRS - IJCLab) and Dr. Vincent Baglin (CERN TE/VSC-VSM), on the measurement and characterisation of the electron cloud in the LHC using the Vacuum Pilot Sector.",
+      p3: "I am looking to apply this rigour to concrete problems in radiation physics: radiation transport, dosimetry, radiation protection, nuclear medicine, and medical applications of accelerators. I place particular importance on standardisation and precision, and dedicate personal time to deepening my expertise in FLUKA and modern data pipelines.",
       tools_intro: "Tools and codes I currently use:"
     },
     experience: {
@@ -55,13 +55,11 @@ window.I18N = {
       title: "Education"
     },
     edu: {
-      cas: "11-day intensive course organised by the CERN Accelerator School (CAS) in collaboration with Riga Technical University, covering medical applications of particle accelerators: radiobiology and oncology, beam delivery systems in clinical settings (linacs, cyclotrons, synchrotrons), short-lived radioisotope production for medical imaging (PET/SPECT), advanced radiotherapy techniques, nuclear medicine, and associated regulatory framework.",
-      phd_honor: "Highest Honours",
       phd_thesis: "<em>Thesis:</em> Study of the electron cloud in the CERN LHC with the Vacuum Pilot Sector.",
-      ifast: "10 intensive days on medical innovation through accelerators. Team proposal: \"Destruction of fibrosis by anti-fibrotic nanoparticles activated by FLASH irradiation.\"",
       juas: "Accelerator design, beam dynamics & instrumentation, collective effects, magnets, synchrotron radiation, cryogenics, RF, vacuum systems.",
       nuclear: "Advanced nuclear physics - Plasma physics - Nuclear fusion.",
       phelma: "Reactor physics, nuclear physics, radiation-matter interaction & dosimetry, radiation protection, neutron transport simulation, thermohydraulics.",
+      honors_highest: "Highest Honours",
       honors_high: "High Honours",
       honors: "Honours"
     },
@@ -87,15 +85,27 @@ window.I18N = {
       o6_title: "Data pipeline - 7000+ LHC fills",
       o6_desc: "End-to-end automation: fetch, parse, validate, archive, query. Python & standardised schemas."
     },
+    events: {
+      title: "Events & training",
+      kind_school: "Summer school",
+      kind_workshop: "Workshop",
+      kind_challenge: "Challenge",
+      kind_conf: "Conference",
+      cas_title: "Topcial course on Medical Accelerators",
+      cas_desc: "11-day intensive course organised by the CERN Accelerator School (CAS) in collaboration with Riga Technical University, covering medical applications of particle accelerators: radiobiology and oncology, beam delivery systems in clinical settings (linacs, cyclotrons, synchrotrons), short-lived radioisotope production for medical imaging (PET/SPECT), advanced radiotherapy techniques, nuclear medicine, and associated regulatory framework.",
+      ifast_title: "Medical Accelerator Innovation Challenge",
+      ifast_desc: "10 intensive days on medical innovation through accelerators. Team proposal: \"Destruction of fibrosis by anti-fibrotic nanoparticles activated by FLASH irradiation.\""
+    },
     skills: {
+      title: "Skills & Tools",
       g_lang: "Languages & Scripting",
       g_sim: "Simulation & Modelling",
       g_data: "Data Analysis & Scientific Computing",
       g_inst: "Instrumentation & Acquisition",
       g_dev: "Dev, Automation & AI",
-      lvl_adv: "Advanced",
-      lvl_int: "Intermediate",
-      lvl_basic: "Basic"
+      lvl_adv: "Adv",
+      lvl_int: "Int",
+      lvl_basic: "Base"
     },
     publications: {
       title: "Publications & Thesis"
@@ -120,9 +130,9 @@ window.I18N = {
       hide_abstract: "Hide abstract"
     },
     contact: {
-      overline: "06. What's next?",
+      overline: "02. What's next?",
       title: "Get in touch",
-      lede: "Open to opportunities in radiation protection, medical physics, accelerator R&D and nuclear engineering. Happy to talk about FLUKA, FLASH-VHEE, electron clouds - or all three.",
+      lede: "Actively looking for a position in radiation protection, medical physics, accelerator R&D, or nuclear engineering. Available immediately, based between Paris, Geneva and Lausanne.",
       cta: "Say hello",
       cv: "Download CV"
     },
@@ -151,9 +161,9 @@ window.I18N = {
     },
     about: {
       title: "À propos",
-      p1: "Docteur en physique des accélérateurs (Université Paris-Saclay, décembre 2025, félicitations du jury) et ingénieur nucléaire diplômé de <a href=\"https://phelma.grenoble-inp.fr/\" target=\"_blank\" rel=\"noopener\">Grenoble INP - PHELMA</a>. Ma thèse, menée au <a href=\"https://home.cern/\" target=\"_blank\" rel=\"noopener\">CERN</a> sous la direction de Dr. Vincent Baglin, a porté sur la mesure et la caractérisation du nuage d'électrons dans le LHC à l'aide du Vacuum Pilot Sector.",
-      p2: "Ma vision de carrière est claire : contribuer à la <span class=\"hl\">radioprotection</span>, à la <span class=\"hl\">dosimétrie</span> et aux <span class=\"hl\">applications médicales des accélérateurs</span> - radiothérapie FLASH-VHEE, hadronthérapie, sûreté des grandes installations. J'attache une importance particulière à la standardisation, à la précision et à la communication scientifique claire, et je consacre du temps personnel à approfondir mes compétences sur FLUKA, la réglementation en radioprotection et les pipelines de données modernes.",
-      p3: "En dehors de la recherche, j'aime la cuisine, le cinéma, les arts martiaux et la physique - le genre de curiosité qui ne s'éteint pas.",
+      p1: "Du réacteur nucléaire à l'accélérateur de particules, j'ai toujours été animé par la physique de l'interaction rayonnement-matière. Appliquée à la médecine nucléaire et à la radioprotection, celle-ci dépasse la simple stimulation intellectuelle pour devenir une physique qui soigne et qui protège.",
+      p2: "Docteur en physique des accélérateurs (Université Paris-Saclay, félicitations du jury) et ingénieur nucléaire (Grenoble INP - PHELMA), j'ai conduit ma thèse au CERN sous la direction du Dr. Gaël Sattonnay (CNRS/IN2P3 - IJCLab) et du Dr. Vincent Baglin (CERN TE/VSC-VSM), sur la mesure et la caractérisation du nuage d'électrons dans le LHC à l'aide du Vacuum Pilot Sector.",
+      p3: "Je cherche à mettre cette rigueur au service de problèmes concrets en physique des rayonnements : transport de rayonnement, dosimétrie, radioprotection, médecine nucléaire ou applications médicales des accélérateurs. J'accorde une importance particulière à la standardisation et à la précision, et je consacre du temps personnel à approfondir mes compétences sur FLUKA et les pipelines de données modernes.",
       tools_intro: "Outils et codes que j'utilise actuellement :"
     },
     experience: {
@@ -183,13 +193,11 @@ window.I18N = {
       title: "Formation"
     },
     edu: {
-      cas: "11 jours de formation intensive organisée par la CERN Accelerator School (CAS) en collaboration avec l'Université Technique de Riga, couvrant les applications médicales des accélérateurs de particules : radiobiologie et oncologie, systèmes de délivrance de faisceau en environnement clinique (linacs, cyclotrons, synchrotrons), production de radio-isotopes pour l'imagerie médicale (TEP/SPECT), techniques avancées de radiothérapie, médecine nucléaire et cadre réglementaire associé.",
-      phd_honor: "Félicitations du jury",
       phd_thesis: "<em>Thèse :</em> Étude du nuage d'électrons dans le LHC du CERN avec le Vacuum Pilot Sector.",
-      ifast: "10 jours intensifs sur l'innovation médicale par accélérateurs. Proposition d'équipe : « Destruction de fibrose par nanoparticules anti-fibrotiques activées par irradiation FLASH ».",
       juas: "Design d'accélérateurs, dynamique et instrumentation de faisceaux, effets collectifs, aimants, rayonnement synchrotron, cryogénie, RF, systèmes vide.",
       nuclear: "Physique nucléaire avancée - Physique des plasmas - Fusion nucléaire.",
       phelma: "Physique des réacteurs, physique nucléaire, interaction rayonnement-matière & dosimétrie, radioprotection, simulation transport neutron, thermohydraulique.",
+      honors_highest: "Félicitations du jury",
       honors_high: "Mention Très Bien",
       honors: "Mention Bien"
     },
@@ -215,15 +223,27 @@ window.I18N = {
       o6_title: "Pipeline de données - 7000+ fills LHC",
       o6_desc: "Automatisation complète : fetch, parsing, validation, archivage, requêtage. Python & schémas standardisés."
     },
+    events: {
+      title: "Événements & formations",
+      kind_school: "École d'été",
+      kind_workshop: "Workshop",
+      kind_challenge: "Challenge",
+      kind_conf: "Conférence",
+      cas_title: "Cours sur les Accélérateurs Médicaux",
+      cas_desc: "11 jours de formation intensive organisée par la CERN Accelerator School (CAS) en collaboration avec l'Université Technique de Riga, couvrant les applications médicales des accélérateurs de particules : radiobiologie et oncologie, systèmes de délivrance de faisceau en environnement clinique (linacs, cyclotrons, synchrotrons), production de radio-isotopes pour l'imagerie médicale (TEP/SPECT), techniques avancées de radiothérapie, médecine nucléaire et cadre réglementaire associé.",
+      ifast_title: "Défi d'innovation médicale par accélérateurs",
+      ifast_desc: "10 jours intensifs sur l'innovation médicale par accélérateurs. Proposition d'équipe : « Destruction de fibrose par nanoparticules anti-fibrotiques activées par irradiation FLASH »."
+    },
     skills: {
+      title: "Compétences & outils",
       g_lang: "Langages & scripts",
       g_sim: "Simulation & modélisation",
       g_data: "Analyse de données & calcul scientifique",
       g_inst: "Instrumentation & acquisition",
       g_dev: "Dev, automatisation & IA",
-      lvl_adv: "Avancé",
-      lvl_int: "Intermédiaire",
-      lvl_basic: "Notions"
+      lvl_adv: "Exp",
+      lvl_int: "Conf",
+      lvl_basic: "Nov"
     },
     publications: {
       title: "Publications & Thèse"
@@ -248,9 +268,9 @@ window.I18N = {
       hide_abstract: "Masquer le résumé"
     },
     contact: {
-      overline: "06. Et maintenant ?",
+      overline: "02. Et maintenant ?",
       title: "Prendre contact",
-      lede: "Ouvert aux opportunités en radioprotection, physique médicale, R&D accélérateurs et génie nucléaire. Toujours partant pour parler FLUKA, FLASH-VHEE, nuage d'électrons - ou les trois.",
+      lede: "En recherche active de poste en radioprotection, physique médicale, R&D accélérateurs ou génie nucléaire. Disponible immédiatement, basé entre Paris, Genève et Lausanne.",
       cta: "Dire bonjour",
       cv: "Télécharger le CV"
     },

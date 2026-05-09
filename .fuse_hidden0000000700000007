@@ -54,7 +54,12 @@
           font-weight="500" fill="currentColor" opacity="0.78" letter-spacing="0.7">Duong</text>
       </svg>
     </a>
-
+    <nav class="topbar__nav" aria-label="Page navigation">
+      <a href="index.html" class="topbar__link" data-page="about" data-i18n="nav.about">About</a>
+      <a href="experience.html" class="topbar__link" data-page="experience" data-i18n="nav.experience">Experience</a>
+      <a href="education.html" class="topbar__link" data-page="education" data-i18n="nav.education">Education</a>
+      <a href="projects.html" class="topbar__link" data-page="projects" data-i18n="nav.projects">Projects</a>
+    </nav>
     <div class="topbar__actions">
       <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
         <span class="lang-toggle__current">EN</span>
@@ -78,22 +83,7 @@
           <p class="side__tagline" data-i18n="side.tagline"></p>
         </header>
 
-
-
-        <nav class="side-nav" aria-label="Page navigation">
-          <ul>
-            <li><a href="index.html" class="side-nav__link" data-page="about"><span class="side-nav__bar"></span><span
-                  data-i18n="nav.about">About</span></a></li>
-            <li><a href="experience.html" class="side-nav__link" data-page="experience"><span
-                  class="side-nav__bar"></span><span data-i18n="nav.experience">Experience</span></a></li>
-            <li><a href="education.html" class="side-nav__link" data-page="education"><span
-                  class="side-nav__bar"></span><span data-i18n="nav.education">Education</span></a></li>
-            <li><a href="projects.html" class="side-nav__link" data-page="projects"><span
-                  class="side-nav__bar"></span><span data-i18n="nav.projects">Projects</span></a></li>
-          </ul>
-        </nav>
-
-
+        <img src="assets/photo.jpg" alt="Quentin DUONG" class="hero__photo" />
 
         <div class="side__bottom">
           <button id="lang-toggle-desk" class="lang-toggle lang-toggle--desk" aria-label="Toggle language">
@@ -152,6 +142,7 @@
         <p class="mobile-intro__role" data-i18n="side.role"></p>
         <p class="mobile-intro__tagline" data-i18n="side.tagline"></p>
       </header>
+      <!-- <img src="assets/photo.jpg" alt="Quentin DUONG" class="hero__photo" /> -->
 
       <div class="page-grid">
 
@@ -159,7 +150,7 @@
         <!-- ===== ABOUT ===== -->
         <section id="about" class="section section--first" aria-labelledby="about-title">
           <h2 id="about-title" class="section__title">
-            <span class="section__num"></span><span data-i18n="about.title"></span>
+            <span class="section__num">01.</span><span data-i18n="about.title"></span>
           </h2>
           <div class="prose">
             <p data-i18n="about.p1"></p>
@@ -170,6 +161,7 @@
 
         <!-- ===== CONTACT ===== -->
         <section id="contact" class="section section--contact" aria-labelledby="contact-title">
+          <p class="contact__overline" data-i18n="contact.overline">06. What's next?</p>
           <h2 id="contact-title" class="contact__title" data-i18n="contact.title">Get in touch</h2>
           <p class="contact__lede" data-i18n="contact.lede"></p>
           <a href="mailto:q.duong13@gmail.com" class="contact__btn" data-i18n="contact.cta"></a>

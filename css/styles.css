@@ -33,11 +33,13 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Layout */
-  --max-w: 1180px;
-  --side-w: 480px;
+  --max-w: 1600px;
+  /* widened so the 50/50 page-grid breathes */
+  --side-w: 620px;
+  /* narrower sidebar — internal nav has moved to the topbar */
   --gutter: clamp(0.625rem, 2vw, 1.5rem);
   /* halved from previous */
-  --section-gap: clamp(5rem, 14vh, 8rem);
+  --section-gap: clamp(0rem, 0vh, 0rem);
   --radius: 4px;
   --topbar-h: 76px;
   --icon-size: 54px;
@@ -128,7 +130,7 @@ svg {
   }
 }
 
-/* ---------- Top bar (always visible, sticky) ---------- */
+/* ---------- Top bar (always visible, sticky, aligned with layout) ---------- */
 .topbar {
   display: flex;
   position: sticky;
@@ -137,12 +139,33 @@ svg {
   align-items: center;
   justify-content: space-between;
   padding: .65rem var(--gutter);
+  /* Limit content width to match the layout below; full-width bg painted via ::before */
+  max-width: var(--max-w);
+  margin: 0 auto;
+  height: var(--topbar-h);
+  gap: 1rem;
+}
+
+.topbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
   background: rgba(10, 25, 47, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(35, 53, 84, 0.6);
-  height: var(--topbar-h);
-  gap: 1rem;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Restore visual stacking — content above the bg */
+.topbar>* {
+  position: relative;
+  z-index: 1;
 }
 
 /* Page navigation (centred between brand and actions) */
@@ -152,6 +175,7 @@ svg {
   gap: 1.6rem;
   margin: 0 auto;
 }
+
 .topbar__link {
   color: var(--slate);
   font-family: var(--font-mono);
@@ -162,10 +186,15 @@ svg {
   position: relative;
   transition: color .2s var(--ease);
 }
-.topbar__link:hover { color: var(--lightest); }
+
+.topbar__link:hover {
+  color: var(--lightest);
+}
+
 .topbar__link.is-current {
   color: var(--accent);
 }
+
 .topbar__link.is-current::after {
   content: '';
   position: absolute;
@@ -196,7 +225,8 @@ svg {
 /* ---------- Layout: split desktop ---------- */
 .layout {
   display: grid;
-  grid-template-columns: var(--side-w) minmax(0, 1fr);
+  /* sidebar = 1/4, main = 3/4 (so each page-grid section = 3/8 of total) */
+  grid-template-columns: 1fr 3fr;
   max-width: var(--max-w);
   margin: 0 auto;
   position: relative;
@@ -271,55 +301,57 @@ svg {
 
 /* Side nav */
 .side-nav {
-  margin: 1.25rem 0;
+  margin: auto 0;
+  text-align: center;
 }
 
+/* Side nav — même style que topbar__link mais vertical */
 .side-nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: .1rem;
+  gap: .25rem;
 }
 
 .side-nav__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  padding: .4rem 0;
   color: var(--slate);
   font-family: var(--font-mono);
-  font-size: .76rem;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  font-weight: 500;
-  transition: color .2s var(--ease);
+  font-size: .82rem;
+  letter-spacing: .04em;
+  text-decoration: none;
+  padding: .35rem .5rem;
+  position: relative;
+  transition: color .2s var(--ease), background .2s var(--ease);
+  border-radius: var(--radius);
+  display: block;
 }
 
-.side-nav__link:hover,
-.side-nav__link.is-active {
+.side-nav__link:hover {
   color: var(--lightest);
 }
 
-.side-nav__bar {
-  display: inline-block;
-  width: 32px;
-  height: 1px;
-  background: var(--slate);
-  transition: width .25s var(--ease), background .2s var(--ease);
+.side-nav__link.is-current {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.side-nav__link:hover .side-nav__bar,
-.side-nav__link.is-active .side-nav__bar {
-  width: 64px;
-  background: var(--lightest);
+.side-nav__link.is-current::before {
+  display: none;
 }
 
-/* Side bottom */
+/* Side bottom — sticks at the bottom of the sidebar; the photo wrapper above
+   uses flex:1 to consume the remaining space and centre the image. */
 .side__bottom {
-  margin-top: auto;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: .65rem;
+  margin-top: auto;
+  text-align: center;
+  align-items: center;
 }
 
 .lang-toggle {
@@ -407,7 +439,7 @@ svg {
 /* ---------- Main content ---------- */
 .main {
   padding: clamp(3rem, 8vh, 5rem) var(--gutter) 4rem;
-  max-width: 760px;
+  max-width: 1140px;
 }
 
 /* ============================================================
@@ -419,15 +451,18 @@ svg {
   gap: clamp(2rem, 4vw, 3rem);
   align-items: start;
 }
-.page-grid > section {
+
+.page-grid>section {
   min-width: 0;
 }
+
 @media (max-width: 960px) {
   .page-grid {
     grid-template-columns: 1fr;
     gap: var(--section-gap);
   }
 }
+
 /* When the layout uses page-grid, widen the main column */
 .main--wide {
   max-width: none;
@@ -438,14 +473,28 @@ svg {
   display: none;
 }
 
-/* Profile photo (used in main column header on mobile, side header on desktop) */
+/* Profile photo lives in the sidebar between header and socials.
+   The wrapper takes all available flex space and centres the image. */
+.side__photo-wrap {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  width: 100%;
+  padding: 1rem 0;
+}
+
 .hero__photo {
   width: 140px;
   height: 140px;
+  max-width: 80%;
+  /* shrinks gracefully if sidebar narrows */
+  max-height: 100%;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid var(--line);
-  margin: 0 0 2rem;
+  margin: 0;
   filter: grayscale(0.15) contrast(1.05);
   transition: filter .3s var(--ease);
 }
@@ -477,13 +526,23 @@ svg {
   letter-spacing: -.005em;
 }
 
+.section__title::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: var(--line);
+  width: 100%;
+  max-width: 1fr;
+  margin-left: 1rem;
+}
+
 .section__title::after {
   content: '';
   display: block;
   height: 1px;
   background: var(--line);
   width: 100%;
-  max-width: 280px;
+  max-width: 1fr;
   margin-left: 1rem;
 }
 
@@ -550,7 +609,7 @@ svg {
 .skills__list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: .5rem;
   padding: 0;
   margin: 0;
@@ -1226,11 +1285,24 @@ svg {
   margin-bottom: .15rem;
 }
 
+.edu-list__honors {
+  font-family: var(--font-mono);
+  font-size: .8rem !important;
+  color: var(--slate);
+  margin-bottom: 1rem;
+}
+
 .edu-list__org {
   font-family: var(--font-mono);
-  font-size: .8rem;
-  color: var(--slate);
-  margin-bottom: .5rem;
+  font-size: .9rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s var(--ease);
+}
+
+.edu-list__org:hover {
+  border-bottom-color: var(--accent);
 }
 
 .edu-list__item p {

@@ -361,11 +361,24 @@
     if (el) el.textContent = new Date().getFullYear();
   }
 
+  // ===== Multi-page topbar nav: highlight current page =====
+  function setupSidebarNav() {
+    const page = document.body && document.body.dataset && document.body.dataset.page;
+    if (!page) return;
+    document.querySelectorAll('.topbar__link, .side-nav__link').forEach(l => {
+      const isCurrent = l.getAttribute('data-page') === page;
+      l.classList.toggle('is-current', isCurrent);
+      if (isCurrent) l.setAttribute('aria-current', 'page');
+      else l.removeAttribute('aria-current');
+    });
+  }
+
   // ===== Init =====
   document.addEventListener('DOMContentLoaded', () => {
     if (typeof window.injectLogos === 'function') window.injectLogos();
     applyLang(getLang());
     applyConfigLinks();
+    setupSidebarNav();
     setupMenu();
     setupTabs();
     setupExpCards();

@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body data-page="about">
+<body data-page="education">
   <!-- Cursor spotlight effect -->
   <div id="spotlight" aria-hidden="true"></div>
 
@@ -77,8 +77,6 @@
           <p class="side__role" data-i18n="side.role"></p>
           <p class="side__tagline" data-i18n="side.tagline"></p>
         </header>
-
-
 
         <nav class="side-nav" aria-label="Page navigation">
           <ul>
@@ -156,43 +154,115 @@
       <div class="page-grid">
 
 
-        <!-- ===== ABOUT ===== -->
-        <section id="about" class="section section--first" aria-labelledby="about-title">
-          <h2 id="about-title" class="section__title">
-            <span class="section__num"></span><span data-i18n="about.title"></span>
+        <!-- ===== EDUCATION ===== -->
+        <section id="education" class="section" aria-labelledby="education-title">
+          <h2 id="education-title" class="section__title">
+            <span class="section__num"></span><span data-i18n="education.title"></span>
           </h2>
-          <div class="prose">
-            <p data-i18n="about.p1"></p>
-            <p data-i18n="about.p2"></p>
-            <p data-i18n="about.p3"></p>
-          </div>
+          <ol class="edu-list">
+
+            <li class="edu-list__item">
+              <div class="edu-list__side">
+                <div class="edu-list__date">2022 — 2025</div>
+                <span class="edu-list__icon-wrap" data-logo-icon="paris-saclay" aria-hidden="true"></span>
+              </div>
+              <div class="edu-list__body">
+                <h3>PhD — Accelerator Physics</h3>
+                <a class="edu-list__org"
+                  href="https://www.universite-paris-saclay.fr/en/doctoral-schools/particles-hadrons-energy-nuclei-instrumentation-imaging-cosmos-et-simulation-pheniics"
+                  target=\"_blank\" rel=\"noopener\">Université Paris-Saclay</a>
+                <p class="edu-list__honors" data-i18n="edu.honors_highest"></p>
+                <p data-i18n="edu.phd_thesis"></p>
+              </div>
+            </li>
+
+            <li class="edu-list__item">
+              <div class="edu-list__side">
+                <div class="edu-list__date">2020 — 2022</div>
+                <span class="edu-list__icon-wrap" data-logo-icon="juas" aria-hidden="true"></span>
+              </div>
+              <div class="edu-list__body">
+                <h3>MSc — Accelerator Physics & Technology</h3>
+                <a class="edu-list__org" href="https://esi-archamps.eu/juas-presentation/" target=\"_blank\"
+                  rel=\"noopener\">Joint Universities Accelerator School</a>
+                <p class="edu-list__honors" data-i18n="edu.honors_high"></p>
+                <p data-i18n="edu.juas"></p>
+              </div>
+              <div class="edu-list__side">
+                <div class="edu-list__date"></div>
+                <p></p>
+                <span class="edu-list__icon-wrap" data-logo-icon="grenoble-alpes" aria-hidden="true"></span>
+
+              </div>
+              <div class="edu-list__body">
+                <p style="margin-bottom: 1rem;"></p>
+                <h3>MSc — Nuclear Physics</h3>
+                <a class="edu-list__org"
+                  href="https://phelma.grenoble-inp.fr/en/studies/master-ingenierie-nucleaire-parcours-energetique-nucleaire-en#page-presentation"
+                  target=\"_blank\" rel=\"noopener\">Université Grenoble Alpes</a>
+                <p class="edu-list__honors" data-i18n="edu.honors_high"></p>
+                <p data-i18n="edu.nuclear"></p>
+              </div>
+            </li>
+            <li class="edu-list__item">
+              <div class="edu-list__side">
+                <div class="edu-list__date">2019 — 2022</div>
+                <span class="edu-list__icon-wrap" data-logo-icon="phelma" aria-hidden="true"></span>
+              </div>
+              <div class="edu-list__body">
+                <h3>Engineering Degree — Nuclear Engineering & Physics</h3>
+                <a class="edu-list__org"
+                  href="https://phelma.grenoble-inp.fr/en/studies/master-s-degree-in-engineering-grenoble-inp-phelma-reactor-physics-and-nuclear-engineering-specialty-gen#page-presentation"
+                  target=\"_blank\" rel=\"noopener\">Grenoble INP - PHELMA</a>
+                <p class="edu-list__honors" data-i18n="edu.honors"></p>
+                <p data-i18n="edu.phelma">Reactor physics, nuclear physics, radiation$-$matter interaction & dosimetry,
+                  radiation protection, neutron transport s imulation, thermohydraulics.</p>
+              </div>
+            </li>
+          </ol>
         </section>
 
-        <!-- ===== CONTACT ===== -->
-        <section id="contact" class="section section--contact" aria-labelledby="contact-title">
-          <h2 id="contact-title" class="contact__title" data-i18n="contact.title">Get in touch</h2>
-          <p class="contact__lede" data-i18n="contact.lede"></p>
-          <a href="mailto:q.duong13@gmail.com" class="contact__btn" data-i18n="contact.cta"></a>
 
-          <div class="contact__alts">
-            <a href="https://www.linkedin.com/in/duong-q" target="_blank" rel="noopener">LinkedIn</a>
-            <span aria-hidden="true">·</span>
-            <a href="tel:+33760841191">+33 7 60 84 11 91</a>
-            <span aria-hidden="true">·</span>
-            <a href="assets/cv/CV_Quentin_DUONG.pdf" target="_blank" rel="noopener" data-i18n="contact.cv"></a>
-          </div>
+        <!-- ===== EVENTS ===== -->
+        <section id="events" class="section" aria-labelledby="events-title">
+          <h2 id="events-title" class="section__title">
+            <span class="section__num"></span><span data-i18n="events.title">Events &amp; training</span>
+          </h2>
+
+          <ol class="edu-list">
+
+            <li class="edu-list__item">
+              <div class="edu-list__side">
+                <div class="edu-list__date">Upcoming</div>
+                <span class="edu-list__icon-wrap" data-logo-icon="cas" aria-hidden="true"></span>
+              </div>
+              <div class="edu-list__body">
+                <h3 data-i18n="events.cas_title">Topcial course on Medical Accelerators</h3>
+                <a class="edu-list__org" href="https://indico.cern.ch/event/1587419/overview" target=\"_blank\"
+                  rel=\"noopener\">CERN Accelerator School</a>
+                <p class="edu-list__honors" data-i18n="events.kind_school">Summer school</p>
+                <p data-i18n="events.cas_desc">
+                  "https://home.cern/students-step-ifast-innovation-challenge/"</p>
+              </div>
+            </li>
+
+            <li class="edu-list__item">
+              <div class="edu-list__side">
+                <div class="edu-list__date">2025</div>
+                <span class="edu-list__icon-wrap" data-logo-icon="ifast" aria-hidden="true"></span>
+              </div>
+              <div class="edu-list__body">
+                <h3 data-i18n="events.ifast_title">Medical Accelerator Innovation Challenge</h3>
+                <a class="edu-list__org" href="https://home.cern/students-step-ifast-innovation-challenge/"
+                  target=\"_blank\" rel=\"noopener\">Innovation Fostering in Accelerator Science and Technology</a>
+                <p class="edu-list__honors" data-i18n="events.kind_challenge">Challenge</p>
+                <p data-i18n="events.ifast_desc"></p>
+              </div>
+            </li>
+
+          </ol>
         </section>
 
-      </div>
-
-      <footer class="footer">
-        <p>
-          <span data-i18n="footer.designed">Designed & built by Quentin DUONG</span>
-          · <a href="https://github.com/" target="_blank" rel="noopener" id="github-link">GitHub</a>
-          · © <span id="year"></span>
-        </p>
-        <p class="footer__small" data-i18n="footer.small"></p>
-      </footer>
     </main>
   </div>
 

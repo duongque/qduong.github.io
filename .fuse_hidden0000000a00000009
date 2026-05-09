@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body data-page="about">
+<body data-page="education">
   <!-- Cursor spotlight effect -->
   <div id="spotlight" aria-hidden="true"></div>
 
@@ -54,7 +54,12 @@
           font-weight="500" fill="currentColor" opacity="0.78" letter-spacing="0.7">Duong</text>
       </svg>
     </a>
-
+    <nav class="topbar__nav" aria-label="Page navigation">
+      <a href="index.html" class="topbar__link" data-page="about" data-i18n="nav.about">About</a>
+      <a href="experience.html" class="topbar__link" data-page="experience" data-i18n="nav.experience">Experience</a>
+      <a href="education.html" class="topbar__link" data-page="education" data-i18n="nav.education">Education</a>
+      <a href="projects.html" class="topbar__link" data-page="projects" data-i18n="nav.projects">Projects</a>
+    </nav>
     <div class="topbar__actions">
       <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
         <span class="lang-toggle__current">EN</span>
@@ -77,23 +82,6 @@
           <p class="side__role" data-i18n="side.role"></p>
           <p class="side__tagline" data-i18n="side.tagline"></p>
         </header>
-
-
-
-        <nav class="side-nav" aria-label="Page navigation">
-          <ul>
-            <li><a href="index.html" class="side-nav__link" data-page="about"><span class="side-nav__bar"></span><span
-                  data-i18n="nav.about">About</span></a></li>
-            <li><a href="experience.html" class="side-nav__link" data-page="experience"><span
-                  class="side-nav__bar"></span><span data-i18n="nav.experience">Experience</span></a></li>
-            <li><a href="education.html" class="side-nav__link" data-page="education"><span
-                  class="side-nav__bar"></span><span data-i18n="nav.education">Education</span></a></li>
-            <li><a href="projects.html" class="side-nav__link" data-page="projects"><span
-                  class="side-nav__bar"></span><span data-i18n="nav.projects">Projects</span></a></li>
-          </ul>
-        </nav>
-
-
 
         <div class="side__bottom">
           <button id="lang-toggle-desk" class="lang-toggle lang-toggle--desk" aria-label="Toggle language">
@@ -152,39 +140,121 @@
         <p class="mobile-intro__role" data-i18n="side.role"></p>
         <p class="mobile-intro__tagline" data-i18n="side.tagline"></p>
       </header>
+      <img src="assets/photo.jpg" alt="Quentin DUONG" class="hero__photo" />
 
       <div class="page-grid">
 
 
-        <!-- ===== ABOUT ===== -->
-        <section id="about" class="section section--first" aria-labelledby="about-title">
-          <h2 id="about-title" class="section__title">
-            <span class="section__num"></span><span data-i18n="about.title"></span>
-          </h2>
-          <div class="prose">
-            <p data-i18n="about.p1"></p>
-            <p data-i18n="about.p2"></p>
-            <p data-i18n="about.p3"></p>
-          </div>
-        </section>
+      <!-- ===== EDUCATION ===== -->
+      <section id="education" class="section" aria-labelledby="education-title">
+        <h2 id="education-title" class="section__title">
+          <span class="section__num">01.</span><span data-i18n="education.title"></span>
+        </h2>
+        <ol class="edu-list">
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">Upcoming</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="cas" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>Topcial course on Medical Accelerators</h3>
+              <p class="edu-list__org"> CERN Accelerator School
+              </p>
+              <p data-i18n="edu.cas"> "https://indico.cern.ch/event/1587419/overview"
+                "https://home.cern/students-step-ifast-innovation-challenge/"</p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2022 — 2025</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="paris-saclay" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>PhD — Accelerator Physics</h3>
+              <p class="edu-list__org">Université Paris-Saclay · <span data-i18n="edu.phd_honor"></span></p>
+              <p data-i18n="edu.phd_thesis"></p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2025</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="ifast" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>i-FAST Medical Accelerator Innovation Challenge</h3>
+              <p class="edu-list__org">Archamps</p>
+              <p data-i18n="edu.ifast"></p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2022</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="juas" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>MSc — Accelerator Physics & Technology (JUAS)</h3>
+              <p class="edu-list__org">Archamps · <span data-i18n="edu.honors_high"></span></p>
+              <p data-i18n="edu.juas"></p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2020 — 2021</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="grenoble-alpes" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>MSc — Nuclear Physics</h3>
+              <p class="edu-list__org">Université Grenoble Alpes</p>
+              <p data-i18n="edu.nuclear"></p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2019 — 2022</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="phelma" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3>Engineering Degree — Nuclear Engineering & Physics</h3>
+              <p class="edu-list__org">Grenoble INP $-$ PHELMA · <span data-i18n="edu.honors"></span></p>
+              <p data-i18n="edu.phelma">Reactor physics, nuclear physics, radiation$-$matter interaction & dosimetry,
+                radiation protection, neutron transport simulation, thermohydraulics.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
 
-        <!-- ===== CONTACT ===== -->
-        <section id="contact" class="section section--contact" aria-labelledby="contact-title">
-          <h2 id="contact-title" class="contact__title" data-i18n="contact.title">Get in touch</h2>
-          <p class="contact__lede" data-i18n="contact.lede"></p>
-          <a href="mailto:q.duong13@gmail.com" class="contact__btn" data-i18n="contact.cta"></a>
 
-          <div class="contact__alts">
-            <a href="https://www.linkedin.com/in/duong-q" target="_blank" rel="noopener">LinkedIn</a>
-            <span aria-hidden="true">·</span>
-            <a href="tel:+33760841191">+33 7 60 84 11 91</a>
-            <span aria-hidden="true">·</span>
-            <a href="assets/cv/CV_Quentin_DUONG.pdf" target="_blank" rel="noopener" data-i18n="contact.cv"></a>
-          </div>
-        </section>
+      <!-- ===== EVENTS ===== -->
+      <section id="events" class="section" aria-labelledby="events-title">
+        <h2 id="events-title" class="section__title">
+          <span class="section__num">02.</span><span data-i18n="events.title">Events &amp; training</span>
+        </h2>
 
-      </div>
-
+        <ol class="edu-list">
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">2025</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="ifast" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3 data-i18n="events.ifast_title">i-FAST Medical Accelerator Innovation Challenge</h3>
+              <p class="edu-list__org" data-i18n="events.kind_challenge">Challenge</p>
+              <p data-i18n="events.ifast_desc"></p>
+            </div>
+          </li>
+          <li class="edu-list__item">
+            <div class="edu-list__side">
+              <div class="edu-list__date">YYYY</div>
+              <span class="edu-list__icon-wrap" data-logo-icon="building" aria-hidden="true"></span>
+            </div>
+            <div class="edu-list__body">
+              <h3 data-i18n="events.placeholder_title">Event title — to fill</h3>
+              <p class="edu-list__org" data-i18n="events.kind_school">Summer school</p>
+              <p data-i18n="events.placeholder_desc"></p>
+            </div>
+          </li>
+        </ol>
+      </section>
       <footer class="footer">
         <p>
           <span data-i18n="footer.designed">Designed & built by Quentin DUONG</span>
