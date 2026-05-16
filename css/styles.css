@@ -764,7 +764,7 @@ svg {
   gap: .35rem;
   list-style: none;
   padding: 0;
-  margin: .85rem 0 0;
+  margin: .46rem 0 0;
 }
 
 .tag-pill {
@@ -809,7 +809,7 @@ svg {
 @media (max-width: 960px) {
   .page-grid {
     grid-template-columns: 1fr;
-    gap: var(--section-gap);
+    gap: 4rem;
   }
 }
 
@@ -855,12 +855,12 @@ svg {
 
 /* ---------- Sections ---------- */
 .section {
-  padding-top: var(--section-gap);
+  padding-top: 0;
   margin-bottom: 0;
 }
 
 .section--first {
-  padding-top: 1rem;
+  padding-top: 0;
 }
 
 .section__title {
@@ -876,24 +876,13 @@ svg {
   letter-spacing: -.005em;
 }
 
-.section__title::before {
-  content: '';
-  display: block;
-  height: 1px;
-  background: var(--line);
-  width: 100%;
-  max-width: 1fr;
-  margin-left: 1rem;
-}
-
+.section__title::before,
 .section__title::after {
   content: '';
   display: block;
   height: 1px;
   background: var(--line);
-  width: 100%;
-  max-width: 1fr;
-  margin-left: 1rem;
+  flex: 1;
 }
 
 .section__num {
@@ -1004,6 +993,7 @@ svg {
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
+  text-align: center;
 }
 
 .skill__level {
@@ -1032,6 +1022,48 @@ svg {
 .skill__level--basic {
   color: var(--slate);
   border-color: var(--line);
+}
+
+/* ============================================================
+   Desktop compact mode (>= 961px) — shrink the Skills section
+   to ~50% of the mobile size, proportionally.
+   Scope is limited to .skills so the topbar logo, Experience tabs
+   org icons and Education school logos keep their 54×54 format.
+   ============================================================ */
+@media (min-width: 961px) {
+  .skills {
+    /* +50% over the previous compact size (27 → 40), scoped here only */
+    --icon-size: 40px;
+    --icon-radius: 6px;
+    gap: .9rem;
+  }
+
+  .skills__group-title {
+    font-size: .72rem;
+    margin-bottom: .45rem;
+  }
+
+  /* Strict 2-column maximum */
+  .skills__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .4rem;
+  }
+
+  .skill {
+    gap: .55rem;
+    padding: .3rem .5rem .3rem .3rem;
+    border-radius: var(--radius);
+  }
+
+  .skill__name {
+    font-size: .78rem;
+  }
+
+  .skill__level {
+    font-size: .6rem;
+    padding: 2px 7px;
+    letter-spacing: .06em;
+  }
 }
 
 /* Logo chips (Skills) */
@@ -1103,13 +1135,15 @@ svg {
 }
 
 /* ============================================================
-   Experience — vertical centred timeline
-   Most recent on top, oldest at bottom. Cards alternate sides.
+   Experience — vertical timeline anchored on the LEFT.
+   Dot is aligned with the date; the card sits below the date,
+   full width to the right of the line.
    ============================================================ */
 .exp-timeline {
   list-style: none;
   position: relative;
-  padding: 0;
+  padding: 0 0 0 40px;
+  /* room for the line + dot at left */
   margin: 1rem 0;
 }
 
@@ -1118,23 +1152,19 @@ svg {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 11px;
+  /* centre of the dot */
   width: 1px;
   background: linear-gradient(to bottom,
       transparent 0,
       var(--line) 12px,
       var(--line) calc(100% - 12px),
       transparent 100%);
-  transform: translateX(-50%);
 }
 
 .exp-item {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-  /* both columns start flush at row top */
-  gap: 2.5rem;
+  display: block;
   margin-bottom: 2.5rem;
 }
 
@@ -1142,61 +1172,39 @@ svg {
   margin-bottom: 0;
 }
 
-/* Force both children of every exp-item to live on the same grid row.
-   Without this, the auto-flow placement puts the left-side card in row 2
-   when the date is declared first in DOM order with grid-column: 2. */
-.exp-item>.exp-card,
-.exp-item>.exp-date--external {
-  grid-row: 1;
-}
-
-.exp-item--left .exp-card {
-  grid-column: 1;
-  text-align: right;
-}
-
-/* Date now sits OUTSIDE the card, in the empty grid column on the
-   opposite side of the timeline. */
+/* Date now sits ABOVE the card, in line with the dot */
 .exp-date--external {
+  display: block;
   font-family: var(--font-mono);
   font-size: .85rem;
   color: var(--accent);
   letter-spacing: .04em;
-  align-self: start;
-  padding-top: 1.2rem;
-  /* visually align with the card's title */
-  margin: 0;
+  margin: 0 0 .6rem;
+  text-align: left;
   white-space: nowrap;
 }
 
-.exp-item--left .exp-date--external {
-  grid-column: 2;
+/* Card is full width below the date */
+.exp-item--left .exp-card,
+.exp-item--right .exp-card,
+.exp-item .exp-card {
   text-align: left;
+  width: 100%;
 }
 
-.exp-item--right .exp-date--external {
-  grid-column: 1;
-  text-align: right;
-}
-
-.exp-item--right .exp-card {
-  grid-column: 2;
-  text-align: left;
-}
-
-/* Centre dot marker on the timeline */
+/* Dot marker, vertically aligned with the date baseline */
 .exp-item::after {
   content: '';
   position: absolute;
-  top: 1.6rem;
-  left: 50%;
+  top: .4rem;
+  left: -29px;
+  /* dot centre lands on the line at 11px from timeline edge */
   width: 13px;
   height: 13px;
   border-radius: 50%;
   background: var(--bg);
   border: 2px solid var(--accent);
   box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.10);
-  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -1293,7 +1301,11 @@ svg {
 }
 
 .exp-card__body .bullets {
-  padding: 0 1.25rem 1.1rem;
+  padding: 0 1.25rem 0.4rem;
+}
+
+.exp-card__body .tags-list {
+  padding: 0 1.25rem 1.25rem;
 }
 
 .exp-card .exp-date {
@@ -1355,70 +1367,56 @@ svg {
     vertical-align: top;
   }
 
-  /* Right-side card → icon in middle-right of the head */
-  .exp-item--right .exp-card__head .exp-org-icon {
+  /* All cards now sit right of the timeline → org icon always top-right */
+  .exp-item--left .exp-card__head .exp-org-icon,
+  .exp-item--right .exp-card__head .exp-org-icon,
+  .exp-card__head .exp-org-icon {
     right: 1.1rem;
+    left: auto;
   }
 
-  .exp-item--right .exp-card__head {
+  .exp-item--left .exp-card__head,
+  .exp-item--right .exp-card__head,
+  .exp-card__head {
     padding-right: calc(var(--icon-size) + 2rem);
-  }
-
-  /* Left-side card → icon in middle-left of the head */
-  .exp-item--left .exp-card__head .exp-org-icon {
-    left: 1.1rem;
-  }
-
-  .exp-item--left .exp-card__head {
-    padding-left: calc(var(--icon-size) + 2rem);
+    padding-left: 1.25rem;
   }
 }
 
-/* Right-aligned cards: bullets aligned right too */
-.exp-item--left .bullets {
-  text-align: right;
+/* Bullets always left-aligned (timeline-on-the-left layout) */
+.exp-item--left .bullets,
+.exp-item--right .bullets,
+.exp-item .bullets {
+  text-align: left;
 }
 
-.exp-item--left .bullets li {
-  padding-left: 0;
-  padding-right: 1.5rem;
+.exp-item--left .bullets li,
+.exp-item--right .bullets li,
+.exp-item .bullets li {
+  padding-left: 1.5rem;
+  padding-right: 0;
 }
 
-.exp-item--left .bullets li::before {
-  left: auto;
-  right: 0;
+.exp-item--left .bullets li::before,
+.exp-item--right .bullets li::before,
+.exp-item .bullets li::before {
+  left: 0;
+  right: auto;
 }
 
-/* Mobile: collapse to single column on the right of the line */
+/* Mobile: tighten the left padding */
 @media (max-width: 760px) {
+  .exp-timeline {
+    padding-left: 32px;
+  }
+
   .exp-timeline::before {
-    left: 12px;
-  }
-
-  .exp-item {
-    grid-template-columns: 1fr;
-    gap: 0;
-    margin-left: 36px;
-  }
-
-  .exp-item--left .exp-card,
-  .exp-item--right .exp-card {
-    grid-column: 1;
-    text-align: left;
-  }
-
-  .exp-item--left .exp-date--external,
-  .exp-item--right .exp-date--external {
-    grid-column: 1;
-    text-align: left;
-    padding-top: 0;
-    padding-bottom: .35rem;
+    left: 9px;
   }
 
   .exp-item::after {
-    left: -28px;
-    transform: none;
-    top: 1.4rem;
+    left: -23px;
+    top: .4rem;
   }
 
   .exp-item--left .bullets {
@@ -2374,10 +2372,6 @@ svg {
 @media (max-width: 520px) {
   .skills-grid {
     grid-template-columns: 1fr;
-  }
-
-  .section__title::after {
-    max-width: 80px;
   }
 
   .featured__title {
