@@ -19,36 +19,16 @@ window.PROJECTS = {
     {
       tech: ['FLUKA', 'Python', 'HPC'],
       link: '',
-      svg: `<svg viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <radialGradient id="pf1g" cx="50%" cy="50%">
-                  <stop offset="0%" stop-color="#64ffda" stop-opacity=".55"/>
-                  <stop offset="60%" stop-color="#64ffda" stop-opacity=".08"/>
-                  <stop offset="100%" stop-color="#64ffda" stop-opacity="0"/>
-                </radialGradient>
-              </defs>
-              <rect width="600" height="360" fill="#0f223e"/>
-              <g stroke="#1d3a6b" stroke-width="1">
-                <line x1="0" y1="60"  x2="600" y2="60"/>
-                <line x1="0" y1="120" x2="600" y2="120"/>
-                <line x1="0" y1="180" x2="600" y2="180"/>
-                <line x1="0" y1="240" x2="600" y2="240"/>
-                <line x1="0" y1="300" x2="600" y2="300"/>
-              </g>
-              <circle cx="300" cy="180" r="120" fill="url(#pf1g)"/>
-              <g stroke="#64ffda" stroke-width="2" fill="none">
-                <ellipse cx="300" cy="180" rx="180" ry="60"/>
-                <ellipse cx="300" cy="180" rx="120" ry="40"/>
-                <ellipse cx="300" cy="180" rx="60"  ry="20"/>
-              </g>
-            </svg>`,
+      svg: '<img src="assets/projects/ifast-pic.png" alt="ADS-Target Activation" style="width:100%;height:100%;object-fit:contain;display:block;background:#0a192f;">',
       en: {
-        title: 'Project title — to be filled',
-        desc: 'Short description of the geometry, particle source, scoring strategy and the question being answered. Replace with your real FLUKA project once you\'ve picked which to feature.'
+        title: 'ADS-Target Activation',
+        subtitle: 'A Python-Driven Sequential Irradiation Framework for LBE Spallation Targets under 1 GeV Proton Irradiation',
+        desc: 'ADS-Target Activation simulates the evolution of the nuclear inventory of an LBE spallation target under sequential 1 GeV proton irradiations, in a context directly inspired by the TRANSMUTEX ADS concept. A Python pipeline drives FLUKA in a loop, reinjecting the isotopic inventory from each cycle as the source term for the next via a Fortran user routine, faithfully reproducing the behaviour of a target under real operating conditions. Particular attention is given to Po-210 production and its radiological implications: residual dose rates, maintenance scenarios, and validation against HINDAS/nTOF experimental data and NEA/AEN technical reports on LBE-cooled ADS systems.'
       },
       fr: {
-        title: 'Titre du projet — à compléter',
-        desc: 'Brève description de la géométrie, de la source, de la stratégie de scoring et de la question traitée. À remplacer par ton vrai projet FLUKA.'
+        title: 'ADS-Target Activation',
+        subtitle: 'Un framework d\'irradiation séquentielle piloté par Python pour cibles de spallation LBE sous faisceau protons de 1 GeV',
+        desc: 'ADS-Target Activation simule l\'évolution de l\'inventaire nucléaire d\'une cible de spallation en LBE soumise à des irradiations protons séquentielles à 1 GeV, dans un contexte directement inspiré du concept ADS de TRANSMUTEX.Un pipeline Python pilote FLUKA en boucle, réinjectant l\'inventaire isotopique de chaque cycle comme source du suivant via user routine Fortran, reproduisant fidèlement le comportement d\'une cible en exploitation réelle. Une attention particulière est portée à la production du Po-210 et à ses implications radiologiques : débits de dose résiduels, scénarios de maintenance et validation contre les données expérimentales HINDAS/nTOF et les rapports NEA/AEN sur les systèmes ADS à caloporteur LBE.'
       }
     }
   ],
@@ -72,10 +52,11 @@ window.renderProjects = function (lang) {
         : '';
       return `
         <li class="featured__item${reverse}">
-          <div class="featured__visual" aria-hidden="true">${p.svg || ''}</div>
           <div class="featured__content">
             <p class="featured__overline">${L === 'fr' ? 'Projet phare' : 'Featured Project'}</p>
             <h3 class="featured__title">${escapeHtml(t.title)}</h3>
+            <h3 class="featured__subtitle">${escapeHtml(t.subtitle)}</h3>
+            <div class="featured__visual" aria-hidden="true">${p.svg || ''}</div>
             <div class="featured__body"><p>${escapeHtml(t.desc)}</p></div>
             <ul class="featured__tech">${tech}</ul>
             ${linkBtn}
@@ -99,6 +80,7 @@ window.renderProjects = function (lang) {
             ${p.icon || ''}
             ${link}
           </header>
+          <h4>${escapeHtml(t.title)}</h4>
           <h4>${escapeHtml(t.title)}</h4>
           <p>${escapeHtml(t.desc)}</p>
           <ul class="mini__tech">${tech}</ul>

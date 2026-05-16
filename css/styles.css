@@ -1677,11 +1677,11 @@ svg {
 .featured__visual {
   position: relative;
   z-index: 1;
-  border-radius: var(--radius);
+  border-radius: 0;
   overflow: hidden;
-  background: var(--bg-soft);
+  background: none;
   aspect-ratio: 5 / 3;
-  border: 1px solid var(--line);
+  border: none;
 }
 
 .featured__visual svg {
@@ -1707,8 +1707,19 @@ svg {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--lightest);
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.featured__subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--lightest);
   margin-bottom: 1rem;
   line-height: 1.25;
+  text-align: center;
 }
 
 .featured__body {
@@ -1719,6 +1730,7 @@ svg {
   color: var(--slate-light);
   font-size: .95rem;
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .featured__tech {
@@ -2185,9 +2197,9 @@ svg {
   }
 
   .featured__visual {
-    grid-column: 1 / 8;
-    grid-row: 1 / -1;
-    opacity: .55;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    opacity: 1;
     transition: opacity .25s var(--ease);
   }
 
@@ -2196,10 +2208,10 @@ svg {
   }
 
   .featured__content {
-    grid-column: 6 / -1;
-    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    grid-row: 2;
     padding: 2rem 0;
-    text-align: right;
+    text-align: left;
   }
 
   .featured__tech {
@@ -2207,11 +2219,11 @@ svg {
   }
 
   .featured__item--reverse .featured__visual {
-    grid-column: 6 / -1;
+    grid-column: 1 / -1;
   }
 
   .featured__item--reverse .featured__content {
-    grid-column: 1 / 8;
+    grid-column: 1 / -1;
     text-align: left;
   }
 
