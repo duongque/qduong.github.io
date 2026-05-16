@@ -15,7 +15,8 @@ portfolio/
 │   └── main.js          # toggle langue, menu mobile, liens config
 ├── assets/
 │   └── cv/
-│       └── CV_Quentin_DUONG.pdf
+│       ├── CV_Quentin_DUONG_EN.pdf   # version EN (présente)
+│       └── CV_Quentin_DUONG_FR.pdf   # version FR (à uploader)
 ├── .nojekyll            # désactive Jekyll sur GitHub Pages
 └── README.md
 ```

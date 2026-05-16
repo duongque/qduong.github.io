@@ -55,6 +55,12 @@
     if (typeof window.renderProjects === 'function') {
       window.renderProjects(lang);
     }
+    // CV download link follows the current language (EN ↔ FR)
+    const cvLangSuffix = (lang === 'fr') ? 'FR' : 'EN';
+    document.querySelectorAll('a[data-cv]').forEach(a => {
+      a.href = 'assets/cv/CV_Quentin_DUONG_' + cvLangSuffix + '.pdf';
+    });
+
     // Bullets may have rewrapped — recompute heights of any open exp-card
     requestAnimationFrame(() => {
       document.querySelectorAll('.exp-card.is-expanded').forEach(c => {

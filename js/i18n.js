@@ -32,21 +32,24 @@ window.I18N = {
       title: "Where I've worked"
     },
     exp: {
-      now: "Present",
+      fr_date: "Jan 2026 — Present",
       fr_role: "R&D Engineer - Automation & Data",
       fr_b1: "End-to-end pipeline for processing unstructured PDF documents.",
       fr_b2: "AI-assisted information extraction with LLM APIs, automated structuring and traceable archival.",
       fr_b3: "Python, async I/O, schema validation, integration tests.",
+      cern_date: "Oct 2022 — Sep 2025",
       cern_role: "Accelerator Physics Researcher",
       cern_b1: "Three-year doctoral programme on the measurement and characterisation of the electron cloud in the LHC using the Vacuum Pilot Sector.",
       cern_b2: "Built and ran an analysis pipeline over <strong>7000+ LHC fills</strong> (2015-2025) - extraction, standardisation and archival.",
       cern_b3: "Routine work in radioactive environments with precision instrumentation; calibration, troubleshooting, in-tunnel access.",
       cern_b4: "Participated in <strong>CLEAR</strong> operations - the 200 MeV electron linac dedicated to FLASH-VHEE research.",
       cern_b5: "Trained on PyECLOUD, COMSOL multiphysics and FLUKA Monte Carlo transport.",
+      kek_date: "Apr 2022 — Aug 2022",
       kek_role: "Particle Physics Researcher",
       kek_b1: "Five-month internship on cosmic muon measurement in an underground cavern with the COMET experiment at J-PARC.",
       kek_b2: "Cosmic muons used as reference particles for dosimetric calibration of gas detectors.",
       kek_b3: "Long-duration acquisition (C++), advanced statistical analysis.",
+      edf_date: "Jun 2021 — Aug 2021",
       edf_role: "Nuclear Safety Computations Engineer",
       edf_b1: "Two-month internship on the automation of safety computations for nuclear power plant steam generators.",
       edf_b2: "VBA / scripting, code review, regression testing on legacy tooling."
@@ -91,10 +94,15 @@ window.I18N = {
       kind_workshop: "Workshop",
       kind_challenge: "Challenge",
       kind_conf: "Conference",
-      cas_title: "Topcial course on Medical Accelerators",
+      cas_title: "Topical course on Medical Accelerators",
       cas_desc: "11-day intensive course organised by the CERN Accelerator School (CAS) in collaboration with Riga Technical University, covering medical applications of particle accelerators: radiobiology and oncology, beam delivery systems in clinical settings (linacs, cyclotrons, synchrotrons), short-lived radioisotope production for medical imaging (PET/SPECT), advanced radiotherapy techniques, nuclear medicine, and associated regulatory framework.",
+      cas_link_name: "Topical course on Medical Accelerators, 15-26 June 2026, Jurmala, Latvia",
+      cas_link_src: "indico.cern.ch",
       ifast_title: "Medical Accelerator Innovation Challenge",
-      ifast_desc: "10 intensive days on medical innovation through accelerators. Team proposal: \"Destruction of fibrosis by anti-fibrotic nanoparticles activated by FLASH irradiation.\""
+      ifast_journal: "Unpublished",
+      ifast_desc: "10 intensive days on medical innovation through accelerators. Team proposal: ",
+      ifast_link_name: "Students step up to the I.FAST innovation challenge",
+      ifast_link_src: "home.cern"
     },
     skills: {
       title: "Skills & Tools",
@@ -134,7 +142,7 @@ window.I18N = {
       title: "Get in touch",
       lede: "Actively looking for a position in radiation protection, medical physics, accelerator R&D, or nuclear engineering. Available immediately, based between Paris, Geneva and Lausanne.",
       cta: "Say hello",
-      cv: "Download CV"
+      cv: "Download CV [EN]"
     },
     footer: {
       designed: "Designed & built by Quentin DUONG",
@@ -170,21 +178,24 @@ window.I18N = {
       title: "Mon parcours professionnel"
     },
     exp: {
-      now: "Aujourd'hui",
+      fr_date: "Jan 2026 — Aujourd'hui",
       fr_role: "Ingénieur R&D - Automatisation & Data",
       fr_b1: "Pipeline end-to-end pour le traitement de documents PDF non structurés.",
       fr_b2: "Extraction d'information assistée par IA avec API LLM, structuration automatisée et archivage traçable.",
       fr_b3: "Python, I/O asynchrones, validation de schémas, tests d'intégration.",
+      cern_date: "Oct 2022 — Sep 2025",
       cern_role: "Chercheur en Physique des Accélérateurs",
       cern_b1: "Programme doctoral de 3 ans sur la mesure et la caractérisation du nuage d'électrons dans le LHC à l'aide du Vacuum Pilot Sector.",
       cern_b2: "Conception et exploitation d'un pipeline d'analyse sur <strong>7000+ fills LHC</strong> (2015-2025) - extraction, standardisation et archivage.",
       cern_b3: "Travail régulier en environnement radioactif avec instruments de précision ; étalonnage, dépannage, accès tunnel.",
       cern_b4: "Participation à l'opération de <strong>CLEAR</strong> - linac électrons de 200 MeV dédié à la recherche FLASH-VHEE.",
       cern_b5: "Formation sur PyECLOUD, COMSOL multiphysique et le code Monte Carlo FLUKA.",
+      kek_date: "Avr 2022 — Août 2022",
       kek_role: "Chercheur en Physique des Particules",
       kek_b1: "Stage de 5 mois sur la mesure de muons cosmiques dans une caverne souterraine avec l'expérience COMET au J-PARC.",
       kek_b2: "Muons cosmiques utilisés comme particules de référence pour l'étalonnage dosimétrique de détecteurs gazeux.",
       kek_b3: "Acquisition longue durée (C++), analyse statistique avancée.",
+      edf_date: "Juin 2021 — Août 2021",
       edf_role: "Ingénieur en Calculs de Sûreté Nucléaire",
       edf_b1: "Stage de 2 mois sur l'automatisation des calculs de sûreté pour les générateurs de vapeur de centrales nucléaires.",
       edf_b2: "VBA / scripting, revue de code, tests de non-régression sur outils legacy."
@@ -231,8 +242,13 @@ window.I18N = {
       kind_conf: "Conférence",
       cas_title: "Cours sur les Accélérateurs Médicaux",
       cas_desc: "11 jours de formation intensive organisée par la CERN Accelerator School (CAS) en collaboration avec l'Université Technique de Riga, couvrant les applications médicales des accélérateurs de particules : radiobiologie et oncologie, systèmes de délivrance de faisceau en environnement clinique (linacs, cyclotrons, synchrotrons), production de radio-isotopes pour l'imagerie médicale (TEP/SPECT), techniques avancées de radiothérapie, médecine nucléaire et cadre réglementaire associé.",
+      cas_link_name: "Topical course on Medical Accelerators, 15-26 June 2026, Jurmala, Latvia",
+      cas_link_src: "indico.cern.ch",
       ifast_title: "Défi d'innovation médicale par accélérateurs",
-      ifast_desc: "10 jours intensifs sur l'innovation médicale par accélérateurs. Proposition d'équipe : « Destruction de fibrose par nanoparticules anti-fibrotiques activées par irradiation FLASH »."
+      ifast_journal: "Non publié",
+      ifast_desc: "10 jours intensifs sur l'innovation médicale par accélérateurs. Proposition d'équipe : ",
+      ifast_link_name: "Quatrième édition du concours I.FAST Innovation",
+      ifast_link_src: "home.cern"
     },
     skills: {
       title: "Compétences & outils",
@@ -272,7 +288,7 @@ window.I18N = {
       title: "Prendre contact",
       lede: "En recherche active de poste en radioprotection, physique médicale, R&D accélérateurs ou génie nucléaire. Disponible immédiatement, basé entre Paris, Genève et Lausanne.",
       cta: "Dire bonjour",
-      cv: "Télécharger le CV"
+      cv: "Télécharger le CV [FR]"
     },
     footer: {
       designed: "Conçu & développé par Quentin DUONG",

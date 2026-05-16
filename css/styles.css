@@ -443,6 +443,356 @@ svg {
 }
 
 /* ============================================================
+   Event link sub-card — compact preview (image left + name/source).
+   Same visual logic as pub-preview but smaller / inside an event item.
+   ============================================================ */
+.event-link {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  height: 64px;
+  gap: 0;
+  margin: .85rem 0 0;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+
+.event-link:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(100, 255, 218, 0.07);
+}
+
+.event-link__cover {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  width: 64px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.event-link__cover img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.event-link__cover img.is-missing {
+  visibility: hidden;
+}
+
+.event-link:has(img.is-missing) .event-link__cover {
+  background:
+    linear-gradient(135deg, var(--bg-soft), var(--bg-elev)),
+    repeating-linear-gradient(45deg, transparent 0 8px, rgba(100, 255, 218, 0.04) 8px 9px);
+}
+
+.event-link:has(img.is-missing) .event-link__cover::before {
+  content: '↗';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+}
+
+.event-link__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .15rem;
+  padding: 0 .8rem;
+  min-width: 0;
+}
+
+.event-link__name {
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--lightest);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.event-link__source {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--accent);
+}
+
+/* ---------- Document previews (publications) ---------- */
+.event__subtitle {
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+}
+
+.event-previews {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+/* Outer wrapper: holds the clickable card + toggle + collapsible abstract */
+.event-preview {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+
+.event-preview:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(100, 255, 218, 0.08);
+}
+
+/* The clickable card area: image on the left, text on the right.
+   Image is cropped vertically to fit the card height. */
+.event-preview__link {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  text-decoration: none;
+  min-height: 130px;
+  color: inherit;
+}
+
+.event-preview__cover {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.event-preview__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  /* show the top of the page */
+  display: block;
+  transition: filter .3s var(--ease), opacity .3s var(--ease);
+}
+
+.event-preview__cover img.is-missing {
+  visibility: hidden;
+}
+
+/* Placeholder when the file is missing */
+.event-preview:has(img.is-missing) .event-preview__cover {
+  background:
+    linear-gradient(135deg, var(--bg-soft), var(--bg-elev)),
+    repeating-linear-gradient(45deg, transparent 0 12px, rgba(100, 255, 218, 0.04) 12px 13px);
+}
+
+.event-preview:has(img.is-missing) .event-preview__cover::before {
+  content: 'Document preview';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: .5rem;
+}
+
+/* Right column: title / journal / year */
+.event-preview__content {
+  padding: .85rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .25rem;
+  min-width: 0;
+  /* allow long titles to truncate gracefully */
+}
+
+.event-preview__title {
+  font-size: .98rem;
+  font-weight: 500;
+  color: var(--lightest);
+  line-height: 1.35;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.event-preview__journal {
+  font-family: var(--font-mono);
+  font-style: italic;
+  color: var(--accent);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-preview__year {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  color: var(--slate);
+  margin: 0;
+}
+
+/* "Reviewing" mode: blur the cover and overlay a badge */
+.event-preview.is-reviewing .event-preview__cover img {
+  filter: blur(5px);
+  opacity: .55;
+}
+
+.event-preview.is-reviewing .event-preview__cover::after {
+  content: 'Reviewing';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  padding: 4px 10px;
+  background: rgba(10, 25, 47, 0.82);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* "+ Show abstract" toggle button — mimics the pattern of exp-card toggle */
+.event-preview__toggle {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: .5rem 1rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: .76rem;
+  letter-spacing: .04em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  transition: background .15s var(--ease);
+}
+
+.event-preview__toggle:hover {
+  background: rgba(100, 255, 218, 0.05);
+}
+
+.event-preview__toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.event-preview__toggle-icon {
+  display: inline-block;
+  width: 1ch;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Collapsible abstract — same max-height transition as exp-card body */
+.event-preview__abstract {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s var(--ease);
+  border-top: 1px solid var(--line);
+  text-align: justify;
+}
+
+.event-preview.is-expanded .event-preview__abstract {
+  /* max-height set by JS to match scrollHeight */
+}
+
+.event-preview__abstract p {
+  padding: .9rem 1.1rem 1rem;
+  margin: 0;
+  color: var(--slate-light);
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+/* Mobile: stack image above text */
+@media (max-width: 520px) {
+  .event-preview__link {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .event-preview__cover {
+    aspect-ratio: 16 / 7;
+  }
+}
+
+
+
+/* ============================================================
+   Reusable tag pills (anthracite stadium shape).
+   Used in Experience, Education and Events to list mobilised
+   skills / courses.
+   ============================================================ */
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  list-style: none;
+  padding: 0;
+  margin: .85rem 0 0;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3.5px 11px;
+  background: #2A2E33;
+  /* anthracite */
+  color: var(--slate-light);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .02em;
+  border-radius: 999px;
+  /* rectangle + half-circles on each side */
+  white-space: nowrap;
+}
+
+/* On the experience.html page, swap visual order so Experience is left (01)
+   and Skills right (02). HTML DOM order is kept unchanged. */
+[data-page="experience"] #experience {
+  order: 1;
+}
+
+[data-page="experience"] #skills {
+  order: 2;
+}
+
+/* ============================================================
    Multi-page layout: two sections side by side (50/50)
    ============================================================ */
 .page-grid {

@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body data-page="about">
+<body data-page="experience">
   <!-- Cursor spotlight effect -->
   <div id="spotlight" aria-hidden="true"></div>
 
@@ -54,12 +54,7 @@
           font-weight="500" fill="currentColor" opacity="0.78" letter-spacing="0.7">Duong</text>
       </svg>
     </a>
-    <nav class="topbar__nav" aria-label="Page navigation">
-      <a href="index.html" class="topbar__link" data-page="about" data-i18n="nav.about">About</a>
-      <a href="experience.html" class="topbar__link" data-page="experience" data-i18n="nav.experience">Experience</a>
-      <a href="education.html" class="topbar__link" data-page="education" data-i18n="nav.education">Education</a>
-      <a href="projects.html" class="topbar__link" data-page="projects" data-i18n="nav.projects">Projects</a>
-    </nav>
+
     <div class="topbar__actions">
       <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
         <span class="lang-toggle__current">EN</span>
@@ -82,6 +77,21 @@
           <p class="side__role" data-i18n="side.role"></p>
           <p class="side__tagline" data-i18n="side.tagline"></p>
         </header>
+
+        <nav class="side-nav" aria-label="Page navigation">
+          <ul>
+            <li><a href="index.html" class="side-nav__link" data-page="about"><span class="side-nav__bar"></span><span
+                  data-i18n="nav.about">About</span></a></li>
+            <li><a href="experience.html" class="side-nav__link" data-page="experience"><span
+                  class="side-nav__bar"></span><span data-i18n="nav.experience">Experience</span></a></li>
+            <li><a href="education.html" class="side-nav__link" data-page="education"><span
+                  class="side-nav__bar"></span><span data-i18n="nav.education">Education</span></a></li>
+            <li><a href="projects.html" class="side-nav__link" data-page="projects"><span
+                  class="side-nav__bar"></span><span data-i18n="nav.projects">Projects</span></a></li>
+          </ul>
+        </nav>
+
+
 
         <div class="side__bottom">
           <button id="lang-toggle-desk" class="lang-toggle lang-toggle--desk" aria-label="Toggle language">
@@ -140,44 +150,221 @@
         <p class="mobile-intro__role" data-i18n="side.role"></p>
         <p class="mobile-intro__tagline" data-i18n="side.tagline"></p>
       </header>
-      <img src="assets/photo.jpg" alt="Quentin DUONG" class="hero__photo" />
 
       <!-- ===== ABOUT ===== -->
-      <section id="about" class="section section--first" aria-labelledby="about-title">
-        <h2 id="about-title" class="section__title">
-          <span class="section__num">01.</span><span data-i18n="about.title"></span>
-        </h2>
-        <div class="prose">
-          <p data-i18n="about.p1"></p>
-          <p data-i18n="about.p2"></p>
-          <p data-i18n="about.p3"></p>
-        </div>
-      </section>
+      <div class="page-grid">
 
-      <!-- ===== CONTACT ===== -->
-      <section id="contact" class="section section--contact" aria-labelledby="contact-title">
-        <p class="contact__overline" data-i18n="contact.overline">06. What's next?</p>
-        <h2 id="contact-title" class="contact__title" data-i18n="contact.title">Get in touch</h2>
-        <p class="contact__lede" data-i18n="contact.lede"></p>
-        <a href="mailto:q.duong13@gmail.com" class="contact__btn" data-i18n="contact.cta"></a>
+        <section id="skills" class="section section--first" aria-labelledby="skills-title">
+          <h2 id="skills-title" class="section__title">
+            <span class="section__num"></span><span data-i18n="skills.title"></span>
+          </h2>
+          <div class="skills" aria-label="Tools and codes">
 
-        <div class="contact__alts">
-          <a href="https://www.linkedin.com/in/duong-q" target="_blank" rel="noopener">LinkedIn</a>
-          <span aria-hidden="true">·</span>
-          <a href="tel:+33760841191">+33 7 60 84 11 91</a>
-          <span aria-hidden="true">·</span>
-          <a href="assets/cv/CV_Quentin_DUONG.pdf" target="_blank" rel="noopener" data-i18n="contact.cv"></a>
-        </div>
-      </section>
+            <section class="skills__group">
+              <h4 class="skills__group-title" data-i18n="skills.g_lang">Languages & Scripting</h4>
+              <ul class="skills__list">
+                <li class="skill"><span class="skill__chip" data-logo-icon="python" aria-hidden="true"></span><span
+                    class="skill__name">Python</span><span class="skill__level skill__level--adv"
+                    data-i18n="skills.lvl_adv">Advanced</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="cpp" aria-hidden="true"></span><span
+                    class="skill__name">C / C++</span><span class="skill__level skill__level--adv"
+                    data-i18n="skills.lvl_adv">Advanced</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="vba" aria-hidden="true"></span><span
+                    class="skill__name">VBA</span><span class="skill__level skill__level--adv"
+                    data-i18n="skills.lvl_adv">Advanced</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="latex" aria-hidden="true"></span><span
+                    class="skill__name">LaTeX</span><span class="skill__level skill__level--adv"
+                    data-i18n="skills.lvl_adv">Advanced</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="bash" aria-hidden="true"></span><span
+                    class="skill__name">Bash</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="powershell" aria-hidden="true"></span><span
+                    class="skill__name">PowerShell</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="fortran" aria-hidden="true"></span><span
+                    class="skill__name">Fortran</span><span class="skill__level skill__level--basic"
+                    data-i18n="skills.lvl_basic">Basic</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="html" aria-hidden="true"></span><span
+                    class="skill__name">HTML</span><span class="skill__level skill__level--basic"
+                    data-i18n="skills.lvl_basic">Basic</span></li>
+              </ul>
+            </section>
 
-      <footer class="footer">
-        <p>
-          <span data-i18n="footer.designed">Designed & built by Quentin DUONG</span>
-          · <a href="https://github.com/" target="_blank" rel="noopener" id="github-link">GitHub</a>
-          · © <span id="year"></span>
-        </p>
-        <p class="footer__small" data-i18n="footer.small"></p>
-      </footer>
+            <section class="skills__group">
+              <h4 class="skills__group-title" data-i18n="skills.g_sim">Simulation & Modelling</h4>
+              <ul class="skills__list">
+                <li class="skill"><span class="skill__chip" data-logo-icon="cern" aria-hidden="true"></span><span
+                    class="skill__name">PyECLOUD</span><span class="skill__level skill__level--adv"
+                    data-i18n="skills.lvl_adv">Advanced</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="fluka" aria-hidden="true"></span><span
+                    class="skill__name">FLUKA <br> (Monte Carlo)</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="comsol" aria-hidden="true"></span><span
+                    class="skill__name">COMSOL <br> Multiphysics</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="cern" aria-hidden="true"></span><span
+                    class="skill__name">MAD-X</span><span class="skill__level skill__level--basic"
+                    data-i18n="skills.lvl_basic">Basic</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="dragon" aria-hidden="true"></span><span
+                    class="skill__name">DRAGON <br> (Monte Carlo)</span><span class="skill__level skill__level--basic"
+                    data-i18n="skills.lvl_basic">Basic</span></li>
+              </ul>
+            </section>
+
+            <section class="skills__group">
+              <h4 class="skills__group-title" data-i18n="skills.g_data">Data Analysis & Scientific Computing</h4>
+              <ul class="skills__list">
+                <li class="skill"><span class="skill__chip" data-logo-icon="python" aria-hidden="true"></span><span
+                    class="skill__name">NumPy <br> SciPy / Pandas <br> Matplotlib</span><span
+                    class="skill__level skill__level--adv" data-i18n="skills.lvl_adv">Advanced</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="root" aria-hidden="true"></span><span
+                    class="skill__name">ROOT</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="cern" aria-hidden="true"></span><span
+                    class="skill__name">TIMBER / NXCALS</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="jupyter" aria-hidden="true"></span><span
+                    class="skill__name">Jupyter <br> Notebook</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="sklearn" aria-hidden="true"></span><span
+                    class="skill__name">scikit-learn</span><span class="skill__level skill__level--basic"
+                    data-i18n="skills.lvl_basic">Basic</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="sql" aria-hidden="true"></span><span
+                    class="skill__name">SQL / SQLite</span><span class="skill__level skill__level--basic"
+                    data-i18n="skills.lvl_basic">Basic</span></li>
+              </ul>
+            </section>
+
+            <section class="skills__group">
+              <h4 class="skills__group-title" data-i18n="skills.g_inst">Instrumentation & Acquisition</h4>
+              <ul class="skills__list">
+                <li class="skill"><span class="skill__chip" data-logo-icon="labview" aria-hidden="true"></span><span
+                    class="skill__name">LabVIEW</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="gpib" aria-hidden="true"></span><span
+                    class="skill__name">GPIB / VISA <br> protocols</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+              </ul>
+            </section>
+
+            <section class="skills__group">
+              <h4 class="skills__group-title" data-i18n="skills.g_dev">Dev, Automation & AI</h4>
+              <ul class="skills__list">
+                <li class="skill"><span class="skill__chip" data-logo-icon="git" aria-hidden="true"></span><span
+                    class="skill__name">Git / GitHub</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="vscode" aria-hidden="true"></span><span
+                    class="skill__name">VS Code</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+                <li class="skill"><span class="skill__chip" data-logo-icon="llmapi" aria-hidden="true"></span><span
+                    class="skill__name">LLM API <br> integration</span><span class="skill__level skill__level--int"
+                    data-i18n="skills.lvl_int">Intermediate</span></li>
+              </ul>
+            </section>
+
+          </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience" class="section" aria-labelledby="experience-title">
+          <h2 id="experience-title" class="section__title">
+            <span class="section__num"></span><span data-i18n="experience.title"></span>
+          </h2>
+
+          <ol class="exp-timeline" aria-label="Career timeline (most recent on top)">
+
+            <li class="exp-item exp-item--right">
+              <p class="exp-date exp-date--external">Jan 2026 — <span data-i18n="exp.now"></span></p>
+              <div class="exp-card">
+                <div class="exp-card__head" role="button" tabindex="0" aria-expanded="false">
+                  <span class="exp-org-icon" data-logo-icon="building" aria-hidden="true"></span>
+                  <h3>
+                    <span class="exp-role" data-i18n="exp.fr_role"></span>
+                    <span class="exp-org">@ Freelance</span>
+                  </h3>
+                </div>
+                <div class="exp-card__body">
+                  <ul class="bullets">
+                    <li data-i18n="exp.fr_b1"></li>
+                    <li data-i18n="exp.fr_b2"></li>
+                    <li data-i18n="exp.fr_b3"></li>
+                  </ul>
+                </div>
+                <button class="exp-card__toggle" type="button" aria-label="Toggle details"></button>
+              </div>
+            </li>
+
+            <li class="exp-item exp-item--left">
+              <p class="exp-date exp-date--external">Oct 2022 — Sep 2025</p>
+              <div class="exp-card">
+                <div class="exp-card__head" role="button" tabindex="0" aria-expanded="false">
+                  <span class="exp-org-icon" data-logo-icon="cern" aria-hidden="true"></span>
+                  <h3>
+                    <span class="exp-role" data-i18n="exp.cern_role"></span>
+                    <span class="exp-org">@ <a href="https://home.cern/" target="_blank" rel="noopener">CERN</a></span>
+                  </h3>
+                </div>
+                <div class="exp-card__body">
+                  <ul class="bullets">
+                    <li data-i18n="exp.cern_b1"></li>
+                    <li data-i18n="exp.cern_b2"></li>
+                    <li data-i18n="exp.cern_b3"></li>
+                    <li data-i18n="exp.cern_b4"></li>
+                    <li data-i18n="exp.cern_b5"></li>
+                  </ul>
+                </div>
+                <button class="exp-card__toggle" type="button" aria-label="Toggle details"></button>
+              </div>
+            </li>
+
+            <li class="exp-item exp-item--right">
+              <p class="exp-date exp-date--external">Apr 2022 — Aug 2022</p>
+              <div class="exp-card">
+                <div class="exp-card__head" role="button" tabindex="0" aria-expanded="false">
+                  <span class="exp-org-icon" data-logo-icon="kek" aria-hidden="true"></span>
+                  <h3>
+                    <span class="exp-role" data-i18n="exp.kek_role"></span>
+                    <span class="exp-org">@ <a href="https://www.kek.jp/en/" target="_blank" rel="noopener">KEK</a> /
+                      <a href="https://j-parc.jp/c/en/" target="_blank" rel="noopener">J-PARC</a></span>
+                  </h3>
+                </div>
+                <div class="exp-card__body">
+                  <ul class="bullets">
+                    <li data-i18n="exp.kek_b1"></li>
+                    <li data-i18n="exp.kek_b2"></li>
+                    <li data-i18n="exp.kek_b3"></li>
+                  </ul>
+                </div>
+                <button class="exp-card__toggle" type="button" aria-label="Toggle details"></button>
+              </div>
+            </li>
+
+            <li class="exp-item exp-item--left">
+              <p class="exp-date exp-date--external">2021</p>
+              <div class="exp-card">
+                <div class="exp-card__head" role="button" tabindex="0" aria-expanded="false">
+                  <span class="exp-org-icon" data-logo-icon="edf" aria-hidden="true"></span>
+                  <h3>
+                    <span class="exp-role" data-i18n="exp.edf_role"></span>
+                    <span class="exp-org">@ EDF</span>
+                  </h3>
+                </div>
+                <div class="exp-card__body">
+                  <ul class="bullets">
+                    <li data-i18n="exp.edf_b1"></li>
+                    <li data-i18n="exp.edf_b2"></li>
+                  </ul>
+                </div>
+                <button class="exp-card__toggle" type="button" aria-label="Toggle details"></button>
+              </div>
+            </li>
+
+          </ol>
+        </section>
+
+      </div>
+
+
     </main>
   </div>
 
