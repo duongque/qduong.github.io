@@ -1308,6 +1308,10 @@ svg {
   padding: 0 1.25rem 1.25rem;
 }
 
+.exp-card__body .bullets li {
+  text-align: justify;
+}
+
 .exp-card .exp-date {
   font-family: var(--font-mono);
   font-size: .76rem;
