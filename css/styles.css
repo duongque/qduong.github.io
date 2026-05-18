@@ -2214,7 +2214,7 @@ svg {
   .featured__content {
     grid-column: 1 / -1;
     grid-row: 2;
-    padding: 2rem 0;
+    padding: 0 0 2rem;
     text-align: left;
   }
 

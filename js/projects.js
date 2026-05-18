@@ -53,7 +53,7 @@ window.renderProjects = function (lang) {
       return `
         <li class="featured__item${reverse}">
           <div class="featured__content">
-            <p class="featured__overline">${L === 'fr' ? 'Projet phare' : 'Featured Project'}</p>
+            <p class="featured__overline">${L === 'fr' ? 'Projets en Cours...' : 'Work in Progress...'}</p>
             <h3 class="featured__title">${escapeHtml(t.title)}</h3>
             <h3 class="featured__subtitle">${escapeHtml(t.subtitle)}</h3>
             <div class="featured__visual" aria-hidden="true">${p.svg || ''}</div>
